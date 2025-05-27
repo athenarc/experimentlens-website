@@ -50,6 +50,14 @@ The tool is centered on **human-in-the-loop experimentation**, enabling users to
   </p>
 </div>
 
+<div style="text-align: center; margin: 2em 0;">
+  <img src="assets/images/model.png" alt="ExperimentLens Model Insights View" style="max-width: 90%; height: auto; border: 1px solid #ccc; border-radius: 6px;">
+  <p style="margin-top: 0.5em; font-style: italic; color: #555;">
+    Model Performance Insights view in ExperimentLens
+  </p>
+</div>
+
+
 
 ## Technical Overview
 ExperimentLens is designed for flexibility and extensibility across diverse AI experimentation infrastructures.
