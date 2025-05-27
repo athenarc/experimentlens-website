@@ -11,7 +11,7 @@ Developed within the context of the [ExtremeXP project](https://extremexp.eu/), 
 The tool is centered on **human-in-the-loop experimentation**, enabling users to monitor experiment lifecycles, inspect results, and gain insights into model performance and configuration sensitivity.
 
 <div style="text-align: center; margin: 2em 0;">
-  <img src="assets/images/landing_page.png" alt="ExperimentLens Dashboard Screenshot" style="max-width: 80%; max-height: auto; border: 1px solid #ccc; border-radius: 6px;">
+  <img src="assets/images/landing_page.png" alt="ExperimentLens Dashboard Screenshot" style="max-width: 90%; max-height: auto; border: 1px solid #ccc; border-radius: 6px;">
   <p style="margin-top: 0.5em; font-style: italic; color: #555;">
     ExperimentLens dashboard: analyzing configuration effects on experiment performance.
   </p>
