@@ -1,0 +1,17 @@
+title: "ExperimentLens"
+description: "Exploring, Monitoring, and Explaining complex AI pipelines"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Plugins required by Minimal Mistakes
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+markdown: kramdown
+highlighter: rouge
+
+# Optional visual settings
+minimal_mistakes_skin: "default"
+
+atom_feed:
+  hide: true
