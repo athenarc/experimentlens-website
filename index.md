@@ -1,6 +1,5 @@
 ---
 layout: splash
-title: "ExperimentLens"
 excerpt: "Exploring, Monitoring, and Explaining complex AI pipelines"
 classes: wide
 ---

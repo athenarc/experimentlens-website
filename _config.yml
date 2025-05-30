@@ -11,7 +11,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Optional visual settings
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "air"
 
 atom_feed:
   hide: true
