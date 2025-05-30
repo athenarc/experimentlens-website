@@ -1,0 +1,68 @@
+title: ExperimentLens
+subtitle: Exploring, Monitoring, and Explaining complex AI pipelines
+headers:
+  about: About ExperimentLens
+  features: Core Features
+  technical: Technical Overview
+  involved: Get Involved
+about:
+- <strong>ExperimentLens</strong> is a lightweight yet powerful visual dashboard for
+  the interactive exploration, monitoring, and explainability of complex AI pipelines.
+- Developed within the context of the <a href="https://extremexp.eu/">ExtremeXP project</a>,
+  ExperimentLens empowers researchers, data scientists, and engineers to make sense
+  of experimental results across multiple runs and interconnected tasks.
+- The tool is centered on <strong>human-in-the-loop experimentation</strong>, enabling
+  users to monitor pipeline lifecycles, inspect results, and gain insights into pipeline
+  behavior and configuration sensitivity.
+images:
+- src: assets/images/landing_page.png
+  caption: 'ExperimentLens dashboard: analyzing configuration effects on experiment
+    performance.'
+- src: assets/images/comparative.png
+  caption: 'Comparative analysis in ExperimentLens: visualizing metric distributions
+    across pipeline variants.'
+- src: assets/images/model.png
+  caption: Model Performance Insights view in ExperimentLens
+features:
+  Run and Configuration Analysis:
+  - Compare metrics and outputs across multiple experiment runs.
+  - Analyze the effect of variability points (e.g., hyperparameters, engine configurations).
+  - Detect patterns, trends, and outliers across different pipeline variants.
+  Pipeline Control and Human-in-the-Loop Feedback:
+  - Monitor and steer pipeline executions at runtime, guided by intermediate results
+    and visual feedback.
+  - Use diagnostic views to adjust configuration choices and re-launch modified pipelines.
+  - Support interactive refinement by integrating user feedback into the exploration
+    process.
+  Artifact and Data Inspection:
+  - Preview input and output datasets, prediction results, and artifacts in rich visual
+    formats.
+  - Context-aware inspection scoped to the task and pipeline level.
+  Integrated Explainability:
+  - Access both local and global post-hoc explanation techniques.
+  - Visualize results of explainability methods like counterfactual examples, Partial
+    Dependence Plots (PDP), and Accumulated Local Effects (ALE).
+  - Link pipeline behavior to specific inputs, parameter settings, and structure.
+technical:
+- '<strong>Experiment tracking integration</strong>: Supports tools like <strong>MLflow</strong>
+  for logging run-level metrics, parameters, and artifacts—enabling visual analysis
+  of experiment outcomes.'
+- '<strong>Workflow orchestration integration</strong>: Connects with <strong>workflow
+  orchestration frameworks</strong> to enable lifecycle control, task-level tracing,
+  and dynamic adjustment of pipelines. Currently, the <strong>ExtremeXP Execution
+  Engine</strong> is supported. Future integration is planned with additional tools
+  such as <strong>Kubeflow</strong>, <strong>Airflow</strong>, and other orchestration
+  platforms.'
+contact:
+  intro_lines:
+  - We welcome collaborations, feedback, and pilot use cases across domains.
+  - 'To learn more, contribute, or request a demo:'
+  email_label: Email
+  repo_label: GitHub Repositories
+  emails:
+  - stavmars@athenarc.gr
+  - gpapas@athenarc.gr
+  repos:
+    Frontend: https://github.com/extremexp-HORIZON/vis-frontend
+    Backend API: https://github.com/extremexp-HORIZON/vis-api
+    Explainability Module: https://github.com/extremexp-HORIZON/explainability-module
