@@ -24,25 +24,36 @@ images:
 - src: assets/images/model.png
   caption: Model Performance Insights view in ExperimentLens
 features:
-  Run and Configuration Analysis:
-  - Compare metrics and outputs across multiple experiment runs.
-  - Analyze the effect of variability points (e.g., hyperparameters, engine configurations).
-  - Detect patterns, trends, and outliers across different pipeline variants.
-  Pipeline Control and Human-in-the-Loop Feedback:
-  - Monitor and steer pipeline executions at runtime, guided by intermediate results
-    and visual feedback.
-  - Use diagnostic views to adjust configuration choices and re-launch modified pipelines.
-  - Support interactive refinement by integrating user feedback into the exploration
-    process.
-  Artifact and Data Inspection:
-  - Preview input and output datasets, prediction results, and artifacts in rich visual
-    formats.
-  - Context-aware inspection scoped to the task and pipeline level.
-  Integrated Explainability:
-  - Access both local and global post-hoc explanation techniques.
-  - Visualize results of explainability methods like counterfactual examples, Partial
-    Dependence Plots (PDP), and Accumulated Local Effects (ALE).
-  - Link pipeline behavior to specific inputs, parameter settings, and structure.
+  - title: Run and Configuration Analysis
+    image: assets/images/comparative.png
+    caption: 'Comparative analysis in ExperimentLens: visualizing metric distributions across pipeline variants.'
+    points:
+      - Compare metrics and outputs across multiple experiment runs.
+      - Analyze the effect of variability points (e.g., hyperparameters, engine configurations).
+      - Detect patterns, trends, and outliers across different pipeline variants.
+  - title: Pipeline Control and Human-in-the-Loop Feedback
+    image: assets/images/model.png
+    caption: Model Performance Insights view in ExperimentLens
+    points:
+      - Monitor and steer pipeline executions at runtime, guided by intermediate results
+        and visual feedback.
+      - Use diagnostic views to adjust configuration choices and re-launch modified pipelines.
+      - Support interactive refinement by integrating user feedback into the exploration process.
+  - title: Artifact and Data Inspection
+    image: assets/images/data_explor.png
+    caption: ''
+    points:
+      - Preview input and output datasets, prediction results, and artifacts in rich visual
+        formats.
+      - Context-aware inspection scoped to the task and pipeline level.
+  - title: Integrated Explainability
+    image: assets/images/feature_expl.png
+    caption: ''
+    points:
+      - Access both local and global post-hoc explanation techniques.
+      - Visualize results of explainability methods like counterfactual examples, Partial
+        Dependence Plots (PDP), and Accumulated Local Effects (ALE).
+      - Link pipeline behavior to specific inputs, parameter settings, and structure.
 technical:
 - '<strong>Experiment tracking integration</strong>: Supports tools like <strong>MLflow</strong>
   for logging run-level metrics, parameters, and artifacts—enabling visual analysis
