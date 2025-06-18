@@ -10,6 +10,9 @@ classes: wide
   <div class="wide">
     <h1 class="text-center splash__title">{{ site.data.index_content.title }}</h1>
     <h3 class="text-center splash__subtitle"><em>{{ site.data.index_content.subtitle }}</em></h3>
+    <div class="button alt text-center">
+      <a href="/demo" target="_blank" rel="noopener noreferrer">Live Demo</a>
+    </div>
     <div class="image-block text-center">
       <img class="image--medium image--center" src="{{ site.data.index_content.images[0].src }}" alt="">
       <p class="small" style="color: white"> {{ site.data.index_content.images[0].caption }} </p>
