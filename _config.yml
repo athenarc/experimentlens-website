@@ -18,3 +18,13 @@ atom_feed:
 
 header:
   show_nav: false
+
+include:
+  - favicon.ico
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      head: |
+        <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
