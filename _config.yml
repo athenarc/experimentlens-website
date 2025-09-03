@@ -11,7 +11,20 @@ markdown: kramdown
 highlighter: rouge
 
 # Optional visual settings
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "contrast"
 
 atom_feed:
   hide: true
+
+header:
+  show_nav: false
+
+include:
+  - favicon.ico
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      head: |
+        <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">

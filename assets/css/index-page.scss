@@ -1,0 +1,173 @@
+---
+---
+
+.image-block {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.image-block img {
+  max-width: 90%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.image-block p {
+  margin-top: 0.5em;
+  font-style: italic;
+  color: #555;
+}
+
+body { overflow-x: hidden; }
+
+.full-width-section {
+  position: relative;
+  padding: 1em 0;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    z-index: -1;
+  }
+
+  > .wide {
+    position: relative;
+  }
+}
+
+.bg-blue {
+  &::before { background: #4182E4; }
+  color: white;
+}
+.bg-gray::before { background: #f5f5f5; }
+
+.bg-blue a {
+  color: #A9C8FF;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.bg-blue a:hover,
+.bg-blue a:focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+#site-nav {
+  display: none;
+}
+
+nav + .initial-content {
+  margin-top: 0;
+}
+
+.masthead__inner-wrap {
+  padding: 0;
+}
+
+.alternating-features {
+  margin-top: 3em;
+}
+
+.feature-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.feature-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1 1 45%;
+  min-width: 280px;
+  margin: auto 0;
+}
+.feature-image {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.feature-text h3 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+.feature-text ul {
+  padding-left: 1.2em;
+}
+
+.feature-text li {
+  margin-bottom: 0.5em;
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+  margin-top: 0.5em;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  .feature-row,
+  .feature-row.reverse {
+    flex-direction: column;
+  }
+
+  .feature-text,
+  .feature-image {
+    flex: 1 1 100%;
+  }
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  }
+
+.button a:hover {
+  border: 1px solid #fff;
+  background: #4182e4;
+  cursor: pointer; 
+  text-decoration: none;
+}
+
+.button.alt {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.button.alt a {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 50px;
+  }
+
+.button.alt a:hover {
+  background: #fff;
+  color: #4182e4;
+  text-decoration: none;
+}
