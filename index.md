@@ -25,6 +25,12 @@ classes: wide
 {% for paragraph in site.data.index_content.about %}
 <p class="lead">{{ paragraph }}</p>
 {% endfor %}
+      
+<div class="image-block text-center">
+  <video muted controls preload="auto" src="{{ '/assets/videos/ExperimentLens_Short_Demo.mp4' | relative_url }}">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 <h2 class="text-left">{{site.data.index_content.headers.features}}</h2>
 <div class="alternating-features">
