@@ -13,6 +13,13 @@
   border-radius: 6px;
 }
 
+.image-block video {
+  max-width: 70%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 .image-block p {
   margin-top: 0.5em;
   font-style: italic;
