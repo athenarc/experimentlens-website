@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "title": "Docs \u2014 ExperimentLens",
+    "description": "ExperimentLens documentation: quick start, building the app, example experiments, and an explainability guide."
+  },
+  "header": {
+    "back": "Back to home",
+    "brand": "ExperimentLens \u00b7 Docs"
+  },
+  "intro": {
+    "eyebrow": "Documentation",
+    "title": "ExperimentLens docs",
+    "body": "Learn how to run ExperimentLens, build the app from source, create your first experiment, and understand what the explainability views are telling you."
+  },
+  "docTabs": {
+    "eyebrow": "Choose an area",
+    "ml": "ML Experiments",
+    "agents": "Agents & LLMs"
+  },
+  "groups": {
+    "ml": [
+      {
+        "title": "Getting started",
+        "children": [
+          {
+            "id": "overview"
+          },
+          {
+            "id": "build-app"
+          }
+        ]
+      },
+      {
+        "title": "Concepts",
+        "children": [
+          {
+            "id": "exp-execution-actions"
+          },
+          {
+            "id": "explainability"
+          }
+        ]
+      },
+      {
+        "title": "Experiments",
+        "children": [
+          {
+            "title": "MLflow",
+            "children": [
+              {
+                "id": "exp-mlflow-basic"
+              },
+              {
+                "id": "exp-mlflow-explain"
+              }
+            ]
+          },
+          {
+            "title": "Kubeflow",
+            "children": [
+              {
+                "id": "exp-kubeflow"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "agents": [
+      {
+        "title": "Getting started",
+        "children": [
+          {
+            "id": "overview"
+          },
+          {
+            "id": "build-app"
+          }
+        ]
+      },
+      {
+        "title": "Experiments",
+        "children": [
+          {
+            "title": "Langfuse",
+            "children": [
+              {
+                "id": "exp-mlflow-langfuse-setup"
+              },
+              {
+                "id": "exp-langfuse-basic"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "icon": "Rocket",
+      "group": "Getting started"
+    },
+    {
+      "id": "build-app",
+      "title": "Build the app",
+      "icon": "Hammer",
+      "group": "Getting started"
+    },
+    {
+      "id": "exp-execution-actions",
+      "title": "Execution engine-only actions",
+      "icon": "Zap",
+      "group": "Concepts"
+    },
+    {
+      "id": "explainability",
+      "title": "How explainability works",
+      "icon": "Brain",
+      "group": "Concepts"
+    },
+    {
+      "id": "exp-mlflow-basic",
+      "title": "MLflow: metrics & params",
+      "icon": "FlaskConical",
+      "group": "Experiments"
+    },
+    {
+      "id": "exp-mlflow-explain",
+      "title": "MLflow + explainability",
+      "icon": "Sparkles",
+      "group": "Experiments"
+    },
+    {
+      "id": "exp-kubeflow",
+      "title": "MLflow + Kubeflow",
+      "icon": "Workflow",
+      "group": "Experiments"
+    },
+    {
+      "id": "exp-mlflow-langfuse-setup",
+      "title": "MLflow + Langfuse: setup",
+      "icon": "Waypoints",
+      "group": "Experiments"
+    },
+    {
+      "id": "exp-langfuse-basic",
+      "title": "A small MLflow + Langfuse experiment",
+      "icon": "FlaskConical",
+      "group": "Experiments"
+    }
+  ],
+  "docSections": [
+    {
+      "id": "overview",
+      "tabs": ["ml", "agents"],
+      "eyebrow": "Getting started",
+      "title": "Overview",
+      "description": "ExperimentLens is a lightweight yet powerful visual dashboard for the interactive exploration, monitoring, and explainability of complex AI pipelines.It empowers researchers, data scientists, and engineers to make sense of experimental results across multiple runs and interconnected tasks.<br/>ExperimentLens is designed around human-in-the-loop experimentation, enabling users to monitor pipeline lifecycles, inspect results, and gain insights into pipeline behavior and configuration sensitivity.<br/><br/><strong>ExperimentLens</strong> is composed of three main components that together enable interactive visual exploration and explainability of AI pipelines:<br/><br/><div class=\"overflow-x-auto\"><table class=\"w-full border-collapse text-left text-sm\"><thead><tr><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">Component</th><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">Description</th></tr></thead><tbody><tr><td class=\"border border-slate-200 px-4 py-2\"><a href=\"https://github.com/ExperimentLens/vis-frontend\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-slate-900 hover:underline\">Visualization UI</a></td><td class=\"border border-slate-200 px-4 py-2\">Interactive dashboard for exploring experiments, monitoring executions, and visualizing explainability results.</td></tr><tr><td class=\"border border-slate-200 px-4 py-2\"><a href=\"https://github.com/ExperimentLens/vis-api\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-slate-900 hover:underline\">Visualization Middleware (Backend)</a></td><td class=\"border border-slate-200 px-4 py-2\">REST-based middleware connecting the UI to experiment tracking tools and orchestration frameworks.</td></tr><tr><td class=\"border border-slate-200 px-4 py-2\"><a href=\"https://github.com/ExperimentLens/explainability-module\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-slate-900 hover:underline\">Explainability Module</a></td><td class=\"border border-slate-200 px-4 py-2\">Provides local and global explainability methods, such as counterfactuals, PDP, and ALE, and integrates results into the UI through the middleware.</td></tr></tbody></table></div><br/>Each component repository includes its own setup and development instructions.",
+      "image": "screenOverview"
+    },
+    {
+      "id": "build-app",
+      "tabs": ["ml", "agents"],
+      "eyebrow": "Getting started",
+      "title": "Build the app",
+      "description": "Build the frontend, API and explainability module from source \u2014 useful for self-hosting and contributing.",
+      "subBlocks": [
+        {
+          "title": "Prerequisites",
+          "content": "Before starting, ensure you have:<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><strong>Docker</strong> (Docker Desktop recommended for Windows/Mac)</li><li><strong>Git</strong></li><li><strong>PowerShell</strong> (Windows) or <strong>Bash</strong> (Linux/macOS)</li></ul>"
+        },
+        {
+          "title": "Clone required repositories",
+          "content": "ExperimentLens consists of three component repositories:<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><code>vis-frontend</code></li><li><code>vis-api</code></li><li><code>explainability-module</code></li></ul><br/>To fetch them automatically, clone the repository <a href=\"https://github.com/ExperimentLens/experiment-lens\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-sky-700 hover:underline\">experiment-lens</a> and run the bootstrap script inside the cloned directory.<br/><br/><h4 class=\"text-xs font-semibold uppercase tracking-wide text-slate-500\">Windows (PowerShell)</h4><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-powershell\">./bootstrap.ps1</code></pre><br/><h4 class=\"text-xs font-semibold uppercase tracking-wide text-slate-500\">Linux / macOS (Bash)</h4><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">bash bootstrap.sh</code></pre><br/>This creates a <code>repos/</code> directory containing all required components."
+        },
+        {
+          "title": "Configure environment files",
+          "content": "A single <code>.env</code> file at the project root configures the entire Docker environment.<br/><br/><ol class=\"list-decimal space-y-2 pl-5\"><li>Copy the template:<pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">cp .env.example .env</code></pre><span class=\"text-xs italic text-slate-500\">Windows users may need to copy manually.</span></li><li>Fill in the required values.</li></ol><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\"># === Data paths (host machine) ===\nOUTPUT_DATA_PATH=./output\nEXPERIMENT_DATA_PATH=./experiments\nMLFLOW_ARTIFACTS_PATH=./opt/data/xtreme/mlflow/mlartifacts\n\n# === vis-api ===\n# Consumed directly by vis-api (mounted as its .env) as well as by docker-compose.\nMLFLOW_TRACKING_TOKEN=test_token\n\n# Langfuse project credentials used by vis-api to send traces, and reused\n# below to auto-provision the same project in the bundled Langfuse instance.\nLANGFUSE_PUBLIC_KEY=pk-lf-00000000-0000-0000-0000-000000000000\nLANGFUSE_SECRET_KEY=sk-lf-00000000-0000-0000-0000-000000000000\n\n# === Langfuse infrastructure (bundled via docker-compose) ===\n# Safe defaults for local use. Change if you plan to expose these ports beyond localhost.\nLANGFUSE_POSTGRES_PASSWORD=postgres\nLANGFUSE_CLICKHOUSE_PASSWORD=clickhouse\nLANGFUSE_REDIS_AUTH=myredissecret\nLANGFUSE_MINIO_ROOT_PASSWORD=miniosecret\nLANGFUSE_SALT=mysalt\n# Generate with: openssl rand -hex 32\nLANGFUSE_ENCRYPTION_KEY=0000000000000000000000000000000000000000000000000000000000000000\nLANGFUSE_NEXTAUTH_SECRET=mysecret\n\n# Login created automatically on first boot at http://localhost:3000\nLANGFUSE_INIT_USER_EMAIL=admin@experimentlens.local\nLANGFUSE_INIT_USER_NAME=admin\nLANGFUSE_INIT_USER_PASSWORD=changeme123</code></pre><br/><ul class=\"list-disc space-y-1 pl-5\"><li><code>OUTPUT_DATA_PATH</code>, <code>EXPERIMENT_DATA_PATH</code>, <code>MLFLOW_ARTIFACTS_PATH</code> &mdash; host paths shared between the explainability module, the API, and MLflow.</li><li><code>MLFLOW_TRACKING_TOKEN</code> &mdash; used by <code>vis-api</code> to authenticate against the MLflow tracking server.</li><li><code>LANGFUSE_PUBLIC_KEY</code>, <code>LANGFUSE_SECRET_KEY</code> &mdash; used both by <code>vis-api</code> to send traces and to auto-provision the matching project in the bundled Langfuse instance (see <strong>MLflow + Langfuse: setup</strong>). The example values work for local use; generate your own for anything beyond that.</li></ul><br/>The remaining Langfuse infrastructure variables (database, storage, and auth secrets) ship with working local defaults; override them in <code>.env</code> if you need anything beyond local use."
+        },
+        {
+          "title": "Build and run ExperimentLens",
+          "content": "Once all repositories and environment files are ready:<br/><br/><ol class=\"list-decimal space-y-4 pl-5\"><li><span class=\"font-semibold uppercase tracking-wide text-slate-500\">Build the Docker images</span><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">docker compose build</code></pre></li><li><span class=\"font-semibold uppercase tracking-wide text-slate-500\">Start all services</span><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">docker compose up</code></pre></li></ol>"
+        },
+        {
+          "title": "Access the dashboard",
+          "content": "Open your browser at:<br/><br/><a href=\"http://localhost:5173\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-sky-700 hover:underline\">http://localhost:5173</a><br/><br/><code>docker compose up</code> also starts <strong>MLflow</strong> and <strong>Langfuse</strong> alongside the app, so no separate installation is required for the experiment examples below:<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li>MLflow &mdash; <a href=\"http://localhost:5000\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-sky-700 hover:underline\">http://localhost:5000</a></li><li>Langfuse &mdash; <a href=\"http://localhost:3000\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-sky-700 hover:underline\">http://localhost:3000</a></li></ul>"
+        }
+      ]
+    },
+    {
+      "id": "exp-execution-actions",
+      "tabs": ["ml"],
+      "eyebrow": "Concepts",
+      "title": "Execution engine actions",
+      "description": "Actions you can perform inside ExperimentLens only when the experiment is backed by an execution engine.",
+      "subBlocks": [
+        {
+          "title": "Create and stop runs from the UI",
+          "content": "When an experiment is backed by an execution engine, ExperimentLens enables run-level actions directly from the workflow table. Each row represents a workflow run and includes an <strong>Actions</strong> column on the right side of the table. From there, you can create or schedule a new run based on the selected configuration, or stop a workflow that is currently running.<br/><br/>The table also shows the current execution <strong>Status</strong> for each run, such as <code>completed</code> or <code>scheduled</code>, so you can quickly decide which actions are available for that workflow.",
+          "image": "workflowTable",
+          "imageAlt": "Workflow table showing execution status and run actions"
+        },
+        {
+          "title": "Launch a workflow from counterfactual explanations",
+          "content": "When an experiment is backed by an execution engine, ExperimentLens can turn selected counterfactual explanations into new workflow executions. In the <strong>Instance View</strong>, select an instance from the classification table, then inspect the generated counterfactuals below it.<br/><br/>The counterfactual table shows suggested changes for either <strong>features</strong> or <strong>hyperparameters</strong>. For each counterfactual row, the <strong>Actions</strong> column provides an execution action that can be used to launch a new workflow run using the suggested changes. This allows you to move directly from explanation to experimentation: inspect why a result could change, then launch a new run to test that configuration.",
+          "image": "counterfactualsScreen",
+          "imageAlt": "Instance view showing counterfactual explanations and workflow spawn actions"
+        }     
+      ]
+    },
+    {
+      "id": "explainability",
+      "tabs": ["ml"],
+      "eyebrow": "Concepts",
+      "title": "How explainability works",
+      "description": "ExperimentLens provides model-level, instance-level, feature-level, hyperparameter-level, and counterfactual explainability views. These views help users understand why a workflow produced a result, which parameters or features influenced performance, and how alternative configurations could change the outcome.",
+      "subBlocks": [
+        {
+          "title": "Model analysis overview",
+          "content": "The model analysis view summarizes the selected trained model and its evaluation results. It shows dataset split information, the number of samples, features, and classes, together with core evaluation artifacts such as the confusion matrix, ROC curve, and classification report.<br/><br/>This view provides a useful starting point for explainability because it gives context about the model's predictive performance before inspecting deeper explanations.",
+          "image": "modelAnalysis",
+          "imageAlt": "Model analysis view showing model overview, data splits, confusion matrix, ROC curve, and classification report"
+        },
+        {
+          "title": "Instance view",
+          "content": "The instance view allows users to inspect individual predictions. It visualizes the test instances and highlights correctly classified and misclassified examples, helping users identify where the model predicts correctly and where it makes errors.<br/><br/>After selecting an instance, ExperimentLens can show instance-specific explanations for the selected row. Users can inspect the local SHAP plot to understand which features pushed the prediction toward or away from the predicted class. This makes it easier to explain a single model decision instead of only looking at global model behavior.<br/><br/>The same view can also display counterfactual suggestions for the selected instance, showing what feature or hyperparameter changes could alter the prediction or improve the result.",
+          "image": "instanceView",
+          "imageAlt": "Instance view showing correct and misclassified predictions with local explanations"
+        },
+        {
+          "title": "Feature explainability",
+          "content": "Feature explainability explains how input features influence the model's predictions. ExperimentLens provides multiple views, including <strong>Feature Importance</strong>, <strong>SHAP Values</strong>, <strong>Partial Dependence Plots</strong>, <strong>2D Partial Dependence Plots</strong> and <strong>Accumulated Local Effects</strong> plots.<br/><br/>Feature importance and SHAP highlight which features contribute most strongly to the model output. PDP and ALE plots show how changing a feature affects the predicted value, helping users understand trends, thresholds, and non-linear behavior.",
+          "image": "featureExplainability",
+          "imageAlt": "Feature explainability view showing feature importance, SHAP values, PDP, and ALE plots"
+        },
+        {
+          "title": "Hyperparameter explainability",
+          "content": "Hyperparameter explainability focuses on how workflow configuration choices affect model performance and fairness metrics. The view includes PDP, ALE and 2D-PDP charts for hyperparameters as well as other experiment parameters.<br/><br/>This helps users understand which hyperparameters have the strongest impact, whether performance changes smoothly or abruptly, and which regions of the configuration space are more promising.",
+          "image": "paramExplainability",
+          "imageAlt": "Hyperparameter explainability view showing PDP, ALE, and 2D-PDP plots"
+        },
+        {
+          "title": "Global experiment explainability",
+          "content": "Global explainability summarizes behavior across the full experiment rather than a single model run. The variability point importance plot shows which experiment parameters contribute most to differences between workflow outcomes.<br/><br/>This view is useful when comparing many workflows because it helps identify which configuration choices explain the largest variation in metrics, performance, or fairness results.",
+          "image": "globalExplainability",
+          "imageAlt": "Global experiment explainability view showing variability point importance and global PDP/ALE plots"
+        },
+        {
+          "title": "Global counterfactuals",
+          "content": "Global counterfactuals suggest high-level actions that could improve the experiment outcomes. Users can configure the number of counterfactual actions, the local counterfactual method, and the action choice strategy. ExperimentLens then summarizes the total cost and effectiveness of the suggested actions.<br/><br/>The table shows recommended feature or hyperparameter changes, while the action selection charts visualize how the selected actions affect the experiment space before and after applying the counterfactual strategy.",
+          "image": "globalCounterfactuals",
+          "imageAlt": "Global counterfactuals view showing action recommendations, cost, effectiveness, and action selection plots"
+        }
+      ]
+    },
+    {
+      "id": "exp-mlflow-basic",
+      "tabs": ["ml"],
+      "eyebrow": "Experiments",
+      "title": "A simple MLflow experiment",
+      "description": "Log parameters, metrics and artifacts to MLflow and open the run in ExperimentLens.",
+      "subBlocks": [
+        {
+          "title": "Set up MLflow tracking",
+          "content": "ExperimentLens integrates with an <strong>MLflow Tracking Server</strong> to load and visualize MLflow-tracked experiments.<br/><br/>MLflow ships as part of the <code>docker-compose.yml</code> stack, so it starts automatically alongside the rest of ExperimentLens (see <strong>Build the app</strong>) and is reachable at:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">http://localhost:5000</code></pre><br/>No separate installation is required. If you point a script at MLflow from outside Docker (for example, running Python directly on the host), use the URL above as <code>MLFLOW_TRACKING_URI</code>; once the container is running, experiments logged to MLflow can be retrieved through the ExperimentLens integration and displayed in the application."
+        },
+        {
+          "title": "Log params & metrics",
+          "content": "Use a small Iris classification problem to verify that MLflow logging works end to end. The example below trains a <strong>Random Forest classifier</strong> across multiple hyperparameter configurations, creating <strong>10 MLflow runs</strong>. Each run logs parameters, evaluation metrics, the trained model, and a text classification report artifact.<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-python\">import mlflow\nimport mlflow.sklearn\nfrom pathlib import Path\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, classification_report, f1_score\nfrom sklearn.model_selection import train_test_split\n\nmlflow.set_tracking_uri(\"http://localhost:5000\")\nmlflow.set_experiment(\"iris-classification-demo\")\n\nX, y = load_iris(return_X_y=True)\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42,\n    stratify=y,\n)\n\nruns = [\n    {\"n_estimators\": 25, \"max_depth\": 2, \"random_state\": 1},\n    {\"n_estimators\": 50, \"max_depth\": 2, \"random_state\": 2},\n    {\"n_estimators\": 75, \"max_depth\": 2, \"random_state\": 3},\n    {\"n_estimators\": 100, \"max_depth\": 3, \"random_state\": 4},\n    {\"n_estimators\": 125, \"max_depth\": 3, \"random_state\": 5},\n    {\"n_estimators\": 150, \"max_depth\": 3, \"random_state\": 6},\n    {\"n_estimators\": 175, \"max_depth\": 4, \"random_state\": 7},\n    {\"n_estimators\": 200, \"max_depth\": 4, \"random_state\": 8},\n    {\"n_estimators\": 225, \"max_depth\": 5, \"random_state\": 9},\n    {\"n_estimators\": 250, \"max_depth\": 5, \"random_state\": 10},\n]\n\nfor index, params in enumerate(runs, start=1):\n    with mlflow.start_run(run_name=f\"random-forest-iris-{index}\"):\n        model = RandomForestClassifier(**params)\n        model.fit(X_train, y_train)\n\n        predictions = model.predict(X_test)\n\n        accuracy = accuracy_score(y_test, predictions)\n        macro_f1 = f1_score(y_test, predictions, average=\"macro\")\n        report = classification_report(y_test, predictions)\n\n        mlflow.log_params(params)\n        mlflow.log_metric(\"accuracy\", accuracy)\n        mlflow.log_metric(\"macro_f1\", macro_f1)\n\n        report_path = Path(f\"classification_report_run_{index}.txt\")\n        report_path.write_text(report)\n        mlflow.log_artifact(str(report_path), artifact_path=\"reports\")\n\n        mlflow.sklearn.log_model(model, artifact_path=\"model\")\n\n        print(\n            f\"run={index}, accuracy={accuracy:.3f}, macro_f1={macro_f1:.3f}\"\n        )</code></pre><br/>After the script finishes, the MLflow experiment should contain 10 runs named <code>random-forest-iris-1</code> through <code>random-forest-iris-10</code>. Open ExperimentLens, select the <code>iris-classification-demo</code> experiment, and use it to inspect the logged parameters, compare metrics across runs, and browse the generated artifacts."
+        }
+      ]
+    },
+    {
+      "id": "exp-mlflow-explain",
+      "tabs": ["ml"],
+      "eyebrow": "Experiments",
+      "title": "MLflow experiment with explainability",
+      "description": "Extend the previous example to log the explainability artifacts required by ExperimentLens.",
+      "subBlocks": [
+        {
+          "title": "Generate & log explainability artifacts",
+          "content": "Extend the Iris classification experiment by logging the files required by the ExperimentLens explainability views. For each MLflow run, the script logs the files to MLflow under the artifact path <code>explainability</code>.<br/><br/>The required files are:<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><code>X_train.csv</code></li><li><code>X_test.csv</code></li><li><code>Y_train.csv</code></li><li><code>Y_pred.csv</code></li><li><code>Y_test.csv</code></li><li><code>model.pkl</code></li><li><code>roc_data.json</code> for ROC curve visualization</li></ul><br/>The <code>roc_data.json</code> file should contain a single ROC object with <code>fpr</code>, <code>tpr</code>, <code>thresholds</code>, and <code>roc_auc</code>.<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-python\">import json\nimport pickle\nfrom pathlib import Path\n\nimport mlflow\nimport numpy as np\nimport pandas as pd\nfrom sklearn.datasets import load_iris\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, auc, classification_report, f1_score, roc_curve\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import label_binarize\n\nmlflow.set_tracking_uri(\"http://127.0.0.1:5000\")\nmlflow.set_experiment(\"iris-classification-demo-explainability\")\nmlflow.set_experiment_tag(\"experiment_type\", \"ml\")\n\niris = load_iris()\nX = pd.DataFrame(iris.data, columns=iris.feature_names)\ny = pd.Series(iris.target, name=\"target\")\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42,\n    stratify=y,\n)\n\nruns = [\n    {\"n_estimators\": 25, \"max_depth\": 2, \"random_state\": 1},\n    {\"n_estimators\": 50, \"max_depth\": 2, \"random_state\": 2},\n    {\"n_estimators\": 75, \"max_depth\": 2, \"random_state\": 3},\n    {\"n_estimators\": 100, \"max_depth\": 3, \"random_state\": 4},\n    {\"n_estimators\": 125, \"max_depth\": 3, \"random_state\": 5},\n    {\"n_estimators\": 150, \"max_depth\": 3, \"random_state\": 6},\n    {\"n_estimators\": 175, \"max_depth\": 4, \"random_state\": 7},\n    {\"n_estimators\": 200, \"max_depth\": 4, \"random_state\": 8},\n    {\"n_estimators\": 225, \"max_depth\": 5, \"random_state\": 9},\n    {\"n_estimators\": 250, \"max_depth\": 5, \"random_state\": 10},\n]\n\nartifact_dir = Path(\"output/explainabiity\")\nartifact_dir.mkdir(parents=True, exist_ok=True)\n\nfor index, params in enumerate(runs, start=1):\n    with mlflow.start_run(run_name=f\"random-forest-iris-explainability-{index}\"):\n        model = RandomForestClassifier(**params)\n        model.fit(X_train, y_train)\n\n        predictions = model.predict(X_test)\n        probabilities = model.predict_proba(X_test)\n\n        accuracy = accuracy_score(y_test, predictions)\n        macro_f1 = f1_score(y_test, predictions, average=\"macro\")\n        report = classification_report(y_test, predictions, target_names=iris.target_names)\n\n        mlflow.log_params(params)\n        mlflow.log_metric(\"accuracy\", accuracy)\n        mlflow.log_metric(\"macro_f1\", macro_f1)\n\n        X_train.to_csv(artifact_dir / \"X_train.csv\", index=False)\n        X_test.to_csv(artifact_dir / \"X_test.csv\", index=False)\n        y_train.to_frame().to_csv(artifact_dir / \"Y_train.csv\", index=False)\n        y_test.to_frame().to_csv(artifact_dir / \"Y_test.csv\", index=False)\n        pd.Series(predictions, name=\"target\").to_frame().to_csv(\n            artifact_dir / \"Y_pred.csv\", index=False\n        )\n\n        with open(artifact_dir / \"model.pkl\", \"wb\") as file:\n            pickle.dump(model, file)\n\n        y_test_binary = label_binarize(y_test, classes=np.unique(y))\n\n        fpr, tpr, thresholds = roc_curve(\n            y_test_binary.ravel(),\n            probabilities.ravel(),\n        )\n\n        roc_data = {\n            \"fpr\": fpr.tolist(),\n            \"tpr\": tpr.tolist(),\n            \"thresholds\": thresholds.tolist(),\n            \"roc_auc\": auc(fpr, tpr),\n        }\n\n        with open(artifact_dir / \"roc_data.json\", \"w\") as file:\n            json.dump(roc_data, file, indent=2)\n\n        report_path = artifact_dir / \"classification_report.txt\"\n        report_path.write_text(report)\n\n        mlflow.log_artifacts(str(artifact_dir), artifact_path=\"explainability\")\n\n        print(\n            f\"run={index}, accuracy={accuracy:.3f}, macro_f1={macro_f1:.3f}\"\n        )</code></pre><br/>After running the script, open ExperimentLens, select the <code>iris-classification-demo-explainability</code> experiment, and inspect one of the logged runs to view the metrics, parameters, explainability artifacts, and ROC curve."
+        }
+      ]
+    },
+    {
+      "id": "exp-kubeflow",
+      "tabs": ["ml"],
+      "eyebrow": "Experiments",
+      "title": "MLflow + Kubeflow",
+      "description": "Run the Iris explainability experiment as a Kubeflow pipeline, log the required explainability artifacts to MLflow, and connect every MLflow run back to its Kubeflow pipeline run.",
+      "subBlocks": [
+        {
+          "title": "Kubeflow version of the explainability experiment",
+          "content": "Kubeflow should be accessible at: <br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">http://localhost:8888</code></pre><br/> This example is the Kubeflow version of the <strong>MLflow + explainability</strong> Iris experiment. It keeps the same core behavior: train a Random Forest model, log metrics, and write the explainability files expected by ExperimentLens under the MLflow artifact path <code>explainability</code>.<br/><br/>The difference is that the experiment now runs as a <strong>Kubeflow Pipeline</strong>. Because of that, each MLflow run must also include Kubeflow metadata tags so ExperimentLens can connect the MLflow run to the Kubeflow execution."
+        },
+        {
+          "title": "Required MLflow tags",
+          "content": "Inside the Kubeflow training component, log these tags immediately after starting the MLflow run:<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><code>kfp.pipeline_name</code>: the Kubeflow pipeline name.</li><li><code>kfp.run_id</code>: the Kubeflow pipeline run ID.</li><li><code>pipeline_name</code> and <code>run_id</code>: compatibility aliases for integrations that expect generic pipeline metadata.</li><li><code>source=kubeflow</code>: marks the run as orchestrated by Kubeflow.</li><li><code>status</code>: starts as <code>running</code>, then becomes <code>finished</code>, <code>failed</code>, or <code>killed</code>.</li></ul><br/>The Kubeflow run ID is passed with <code>dsl.PIPELINE_JOB_ID_PLACEHOLDER</code>, which Kubeflow resolves at runtime."
+        },
+        {
+          "title": "Failure handling",
+          "content": "Register the MLflow failure handler as soon as the MLflow run starts. This is important because a Kubeflow component can fail through a Python exception, manual cancellation, pod termination, or interruption signal. The handler updates the MLflow run status and logs termination metadata. If an exception occurs, it also writes <code>errors/error_traceback.txt</code> as an MLflow artifact."
+        },
+        {
+          "title": "Full Iris explainability Kubeflow pipeline",
+          "content": "Use this file as <code>iris_kubeflow_explainability_pipeline.py</code>. Update <code>MLFLOW_TRACKING_URI</code>, <code>MLFLOW_TOKEN</code>, and <code>MLFLOW_EXPERIMENT_NAME</code> before compiling it.<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-python\">from kfp import compiler, dsl\nfrom kfp.dsl import Dataset, Input, Metrics, Output\n\n\n@dsl.component(\n    base_image=\"python:3.9\",\n    packages_to_install=[\n        \"pandas==2.2.2\",\n        \"numpy==1.26.4\",\n        \"scikit-learn==1.4.2\",\n        \"mlflow==2.9.2\",\n    ],\n)\ndef generate_iris_data(output_dataset: Output[Dataset]):\n    import os\n\n    import pandas as pd\n    from sklearn.datasets import load_iris\n\n    iris = load_iris()\n\n    df = pd.DataFrame(iris.data, columns=iris.feature_names)\n    df[\"target\"] = iris.target\n\n    os.makedirs(output_dataset.path, exist_ok=True)\n    df.to_csv(os.path.join(output_dataset.path, \"iris.csv\"), index=False)\n\n\n@dsl.component(\n    base_image=\"python:3.9\",\n    packages_to_install=[\n        \"pandas==2.2.2\",\n        \"numpy==1.26.4\",\n        \"scikit-learn==1.4.2\",\n        \"mlflow==2.9.2\",\n    ],\n)\ndef train_explainability_and_log(\n    input_dataset: Input[Dataset],\n    run_metrics: Output[Metrics],\n    n_estimators: int,\n    max_depth: int,\n    pipeline_name: str,\n    kfp_run_id: str,\n):\n    import json\n    import os\n    import pickle\n    import signal\n    import tempfile\n    import traceback\n    from pathlib import Path\n\n    import mlflow\n    import mlflow.sklearn\n    import numpy as np\n    import pandas as pd\n    from mlflow.models import infer_signature\n    from mlflow.tracking import MlflowClient\n    from sklearn.ensemble import RandomForestClassifier\n    from sklearn.metrics import accuracy_score, auc, classification_report, f1_score, roc_curve\n    from sklearn.model_selection import train_test_split\n    from sklearn.preprocessing import label_binarize\n\n    def register_mlflow_failure_handlers(run_id: str):\n        finalized = {\"done\": False}\n\n        def finalize(status: str, reason: str, extra=None):\n            if finalized[\"done\"]:\n                return\n            finalized[\"done\"] = True\n            try:\n                mlflow.set_tag(\"status\", status.lower())\n                mlflow.set_tag(\"termination.reason\", reason)\n                mlflow.set_tag(\"termination.pid\", str(os.getpid()))\n                if extra:\n                    for key, value in extra.items():\n                        mlflow.set_tag(f\"termination.{key}\", str(value))\n                mlflow.end_run(status=status)\n            except Exception:\n                pass\n\n        def signal_handler(signum, frame):\n            try:\n                signal_name = signal.Signals(signum).name\n            except Exception:\n                signal_name = str(signum)\n\n            finalize(\n                status=\"KILLED\",\n                reason=\"signal\",\n                extra={\"signal\": signal_name, \"run_id\": run_id},\n            )\n            raise SystemExit(128 + int(signum))\n\n        for signum in (signal.SIGTERM, signal.SIGINT):\n            try:\n                signal.signal(signum, signal_handler)\n            except Exception:\n                pass\n\n        def mark_failed(exc: BaseException):\n            traceback_text = traceback.format_exc()\n            finalize(\n                status=\"FAILED\",\n                reason=\"exception\",\n                extra={\"exception_type\": type(exc).__name__, \"run_id\": run_id},\n            )\n            try:\n                with tempfile.TemporaryDirectory() as tmpdir:\n                    path = os.path.join(tmpdir, \"error_traceback.txt\")\n                    with open(path, \"w\", encoding=\"utf-8\") as file:\n                        file.write(traceback_text)\n                    mlflow.log_artifact(path, artifact_path=\"errors\")\n            except Exception:\n                pass\n\n        return mark_failed\n\n    MLFLOW_TRACKING_URI = \"http://&lt;mlflow-host&gt;:5000\"\n    MLFLOW_TOKEN = \"&lt;token-if-needed&gt;\"\n    MLFLOW_EXPERIMENT_NAME = \"iris-classification-demo-kubeflow-explainability\"\n\n    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)\n    os.environ[\"MLFLOW_TRACKING_TOKEN\"] = MLFLOW_TOKEN\n\n    mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)\n    exp = mlflow.get_experiment_by_name(MLFLOW_EXPERIMENT_NAME)\n    if exp is None:\n        raise RuntimeError(f\"Could not resolve MLflow experiment: {MLFLOW_EXPERIMENT_NAME}\")\n\n    client = MlflowClient()\n    client.set_experiment_tag(exp.experiment_id, \"kfp.pipeline_name\", pipeline_name)\n\n    df = pd.read_csv(os.path.join(input_dataset.path, \"iris.csv\"))\n    X = df.drop(columns=[\"target\"])\n    y = df[\"target\"]\n\n    X_train, X_test, y_train, y_test = train_test_split(\n        X,\n        y,\n        test_size=0.2,\n        random_state=42,\n        stratify=y,\n    )\n\n    params = {\n        \"n_estimators\": n_estimators,\n        \"max_depth\": max_depth,\n        \"random_state\": 42,\n    }\n\n    with mlflow.start_run(run_name=f\"kfp-iris-explainability-{kfp_run_id}\") as run:\n        mark_failed = register_mlflow_failure_handlers(run.info.run_id)\n\n        try:\n            mlflow.set_tags(\n                {\n                    \"kfp.pipeline_name\": pipeline_name,\n                    \"kfp.run_id\": kfp_run_id,\n                    \"pipeline_name\": pipeline_name,\n                    \"run_id\": kfp_run_id,\n                    \"source\": \"kubeflow\",\n                    \"status\": \"running\",\n                }\n            )\n\n            mlflow.log_params(params)\n\n            model = RandomForestClassifier(**params)\n            model.fit(X_train, y_train)\n\n            predictions = model.predict(X_test)\n            probabilities = model.predict_proba(X_test)\n\n            accuracy = accuracy_score(y_test, predictions)\n            macro_f1 = f1_score(y_test, predictions, average=\"macro\")\n            report = classification_report(y_test, predictions)\n\n            mlflow.log_metric(\"accuracy\", accuracy)\n            mlflow.log_metric(\"macro_f1\", macro_f1)\n\n            with tempfile.TemporaryDirectory() as tmpdir:\n                artifact_dir = Path(tmpdir) / \"explainability\"\n                artifact_dir.mkdir(parents=True, exist_ok=True)\n\n                X_train.to_csv(artifact_dir / \"X_train.csv\", index=False)\n                X_test.to_csv(artifact_dir / \"X_test.csv\", index=False)\n                y_train.to_frame(name=\"target\").to_csv(\n                    artifact_dir / \"Y_train.csv\",\n                    index=False,\n                )\n                pd.Series(predictions, name=\"target\").to_frame().to_csv(\n                    artifact_dir / \"Y_pred.csv\",\n                    index=False,\n                )\n\n                with open(artifact_dir / \"model.pkl\", \"wb\") as file:\n                    pickle.dump(model, file)\n\n                y_test_binary = label_binarize(y_test, classes=np.unique(y))\n                fpr, tpr, thresholds = roc_curve(\n                    y_test_binary.ravel(),\n                    probabilities.ravel(),\n                )\n\n                roc_data = {\n                    \"fpr\": fpr.tolist(),\n                    \"tpr\": tpr.tolist(),\n                    \"thresholds\": thresholds.tolist(),\n                    \"roc_auc\": auc(fpr, tpr),\n                }\n\n                with open(artifact_dir / \"roc_data.json\", \"w\", encoding=\"utf-8\") as file:\n                    json.dump(roc_data, file, indent=2)\n\n                report_path = artifact_dir / \"classification_report.txt\"\n                report_path.write_text(report, encoding=\"utf-8\")\n\n                mlflow.log_artifacts(str(artifact_dir), artifact_path=\"explainability\")\n\n            signature = infer_signature(X_test, predictions)\n            mlflow.sklearn.log_model(\n                sk_model=model,\n                artifact_path=\"model\",\n                signature=signature,\n                input_example=X_test.head(3),\n            )\n\n            summary = {\n                \"mlflow_run_id\": run.info.run_id,\n                \"kfp_run_id\": kfp_run_id,\n                \"pipeline_name\": pipeline_name,\n                \"mlflow_tracking_uri\": MLFLOW_TRACKING_URI,\n                \"accuracy\": accuracy,\n                \"macro_f1\": macro_f1,\n            }\n\n            with open(run_metrics.path, \"w\", encoding=\"utf-8\") as file:\n                json.dump(summary, file)\n\n            mlflow.set_tag(\"status\", \"finished\")\n            print(json.dumps(summary, indent=2))\n        except SystemExit:\n            raise\n        except Exception as exc:\n            mark_failed(exc)\n            raise\n\n\n@dsl.pipeline(name=\"iris-kubeflow-explainability-pipeline\")\ndef iris_kubeflow_explainability_pipeline(\n    n_estimators: int = 100,\n    max_depth: int = 3,\n    pipeline_name: str = \"iris-kubeflow-explainability-pipeline\",\n):\n    data_op = generate_iris_data().set_caching_options(enable_caching=True)\n\n    train_op = train_explainability_and_log(\n        input_dataset=data_op.outputs[\"output_dataset\"],\n        n_estimators=n_estimators,\n        max_depth=max_depth,\n        pipeline_name=pipeline_name,\n        kfp_run_id=dsl.PIPELINE_JOB_ID_PLACEHOLDER,\n    ).after(data_op)\n    train_op.set_caching_options(enable_caching=False)\n\n\nif __name__ == \"__main__\":\n    compiler.Compiler().compile(\n        pipeline_func=iris_kubeflow_explainability_pipeline,\n        package_path=\"iris_kubeflow_explainability.yaml\",\n    )\n    print(\"Compiled iris_kubeflow_explainability.yaml\")</code></pre>"
+        },
+        {
+          "title": "Submit & monitor runs",
+          "content": "Compile the pipeline and upload the generated YAML to Kubeflow Pipelines, or submit it with your configured Kubeflow client.<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">python iris_kubeflow_explainability_pipeline.py\n\n# Then upload/run iris_kubeflow_explainability.yaml in Kubeflow Pipelines.</code></pre><br/>After the run starts, the MLflow run name will include the Kubeflow run ID, and the same ID will be available in the <code>kfp.run_id</code> and <code>run_id</code> tags."
+        },
+        {
+          "title": "Open the run in ExperimentLens",
+          "content": "After the Kubeflow run finishes, open ExperimentLens and select <code>iris-classification-demo-kubeflow-explainability</code>. Each run should include MLflow parameters, metrics, the model artifact, Kubeflow metadata tags, and the <code>explainability</code> artifact folder containing <code>X_train.csv</code>, <code>X_test.csv</code>, <code>Y_train.csv</code>, <code>Y_pred.csv</code>, <code>model.pkl</code>, <code>roc_data.json</code>, and <code>classification_report.txt</code>."
+        }
+      ]
+    },
+    {
+      "id": "exp-mlflow-langfuse-setup",
+      "tabs": ["agents"],
+      "eyebrow": "Experiments",
+      "title": "MLflow + Langfuse: setup",
+      "description": "Set up MLflow and Langfuse tracking before running the agentic experiment example.",
+      "subBlocks": [
+        {
+          "title": "Set up MLflow tracking",
+          "content": "ExperimentLens integrates with an <strong>MLflow Tracking Server</strong> to load and visualize MLflow-tracked experiments.<br/><br/>MLflow ships as part of the <code>docker-compose.yml</code> stack, so it starts automatically alongside the rest of ExperimentLens (see <strong>Build the app</strong>) and is reachable at:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">http://localhost:5000</code></pre><br/>No separate installation is required. If you point a script at MLflow from outside Docker (for example, running Python directly on the host), use the URL above as <code>MLFLOW_TRACKING_URI</code>; once the container is running, experiments logged to MLflow can be retrieved through the ExperimentLens integration and displayed in the application."
+        },
+        {
+          "title": "Set up Langfuse",
+          "content": "ExperimentLens integrates with <strong>Langfuse</strong> to load and visualize traces from agent and LLM experiments.<br/><br/>Langfuse ships as part of the <code>docker-compose.yml</code> stack and starts automatically alongside the rest of ExperimentLens (see <strong>Build the app</strong>), reachable at:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">http://localhost:3000</code></pre><br/>Instead of creating a project and API keys by hand through the Langfuse UI, set the key pair yourself in the root <code>.env</code> file <strong>before</strong> running <code>docker compose up</code>:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">LANGFUSE_SECRET_KEY=\nLANGFUSE_PUBLIC_KEY=</code></pre><br/>On first start, Langfuse automatically provisions an <code>ExperimentLens</code> organization, project, and admin user, and registers this exact key pair against that project &mdash; so the backend API and any experiment script using the same keys can retrieve traces immediately, with no manual UI setup.<br/><br/>The auto-created admin login defaults to <code>admin@experimentlens.local</code> / <code>changeme123</code>; override it with <code>LANGFUSE_INIT_USER_EMAIL</code> and <code>LANGFUSE_INIT_USER_PASSWORD</code> in <code>.env</code> if you plan to sign in to the Langfuse UI directly."
+        }
+      ]
+    },
+    {
+      "id": "exp-langfuse-basic",
+      "tabs": ["agents"],
+      "eyebrow": "Experiments",
+      "title": "A minimal MLflow + Langfuse experiment",
+      "description": "Run a minimal retrieval-augmented Q&amp;A example that traces every step with Langfuse and logs the same run to MLflow, then open it inside ExperimentLens.",
+      "subBlocks": [
+        {
+          "title": "Prerequisites",
+          "content": "Before running the example, make sure the following are in place.<br/><br/><h4 class=\"text-xs font-semibold uppercase tracking-wide text-slate-500\">Ollama (local LLM)</h4><br/>Install <a href=\"https://ollama.com\" target=\"_blank\" rel=\"noreferrer\" class=\"font-medium text-sky-700 hover:underline\">Ollama</a> and pull the model used by this example:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">ollama pull llama3.2</code></pre><br/>Ollama should be reachable at <code>http://localhost:11434</code>.<br/><br/><h4 class=\"text-xs font-semibold uppercase tracking-wide text-slate-500\">Python packages</h4><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">pip install mlflow python-dotenv langchain-community langchain-huggingface langchain-text-splitters langfuse litellm faiss-cpu sentence-transformers</code></pre><br/><h4 class=\"text-xs font-semibold uppercase tracking-wide text-slate-500\">Environment variables</h4><br/>Create a <code>.env</code> file next to the script, reusing the Langfuse key pair configured in <strong>MLflow + Langfuse: setup</strong>, plus the model configuration:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-text\">MLFLOW_TRACKING_URI=http://127.0.0.1:5000\nMLFLOW_EXPERIMENT=docs_minimal_rag\nLANGFUSE_BASE_URL=http://localhost:3000\nLANGFUSE_PUBLIC_KEY=\nLANGFUSE_SECRET_KEY=\nLLM_MODEL=ollama/llama3.2\nOLLAMA_API_BASE=http://localhost:11434\nLOCAL_EMBED_MODEL=sentence-transformers/all-MiniLM-L6-v2</code></pre><br/>Use the <strong>same</strong> <code>LANGFUSE_PUBLIC_KEY</code> / <code>LANGFUSE_SECRET_KEY</code> pair already set in the root <code>.env</code>, so ExperimentLens can retrieve the trace this script creates."
+        },
+        {
+          "title": "What the example does",
+          "content": "This example runs a minimal retrieval-augmented Q&amp;A pipeline over three short in-memory documents and records every step within a single connected trace.<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><strong>Build a vector store</strong> \u2014 the documents are chunked and embedded with a local <code>sentence-transformers</code> model into an in-memory FAISS index.</li><li><strong>Retrieve</strong> \u2014 the top matching chunks for the question are retrieved from the index.</li><li><strong>Generate</strong> \u2014 the retrieved chunks are inserted into a grounded QA prompt and sent to the local Ollama model through LiteLLM.</li><li><strong>Score</strong> \u2014 the answer is compared against a reference answer with token-F1 and embedding similarity, alongside a retrieval-hit check, latency, and token usage.</li></ul><br/>Each step (<code>build_vectorstore</code>, <code>retrieve_documents</code>, <code>llm_call</code>) is logged to Langfuse as its own observation nested under one parent trace, so the whole request/response flow can be replayed step by step."
+        },
+        {
+          "title": "Linking the MLflow run to the Langfuse trace",
+          "content": "MLflow and Langfuse are separate systems, so the script explicitly links the MLflow run to its corresponding Langfuse trace. \u2014 using the same approach used to connect Kubeflow runs back to MLflow in <strong>MLflow + Kubeflow</strong>.<br/><br/><ul class=\"list-disc space-y-1 pl-5\"><li><code>propagate_attributes(session_id=run_id, user_id=experiment_id, ...)</code> stamps the MLflow <code>run_id</code> and <code>experiment_id</code> onto every Langfuse observation created inside the block.</li><li>Once the trace finishes, <code>langfuse.trace_id</code> and <code>langfuse.trace_url</code> are written back as MLflow tags on the run.</li><li>The same metrics (<code>token_f1</code>, <code>semantic_similarity</code>, <code>retrieval_hit</code>, <code>latency_ms</code>, <code>total_tokens</code>) are recorded twice: as Langfuse trace scores, and as MLflow metrics via <code>mlflow.log_metrics</code>.</li></ul><br/>This two-way tagging is what lets ExperimentLens open the matching Langfuse trace directly from the MLflow run in the <strong>Agents &amp; LLMs</strong> view."
+        },
+        {
+          "title": "Full example script",
+          "content": "Save this as <code>rag_experiment.py</code> next to the <code>.env</code> file from the prerequisites above.<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-python\">import os\nimport re\nimport time\nfrom collections import Counter\n\nimport mlflow\nfrom dotenv import load_dotenv\nfrom langchain_community.vectorstores import FAISS\nfrom langchain_huggingface import HuggingFaceEmbeddings\nfrom langchain_text_splitters import RecursiveCharacterTextSplitter\nfrom langfuse import Langfuse, propagate_attributes\nfrom litellm import completion\nfrom mlflow.tracking import MlflowClient\n\nload_dotenv()\n\nMLFLOW_URI = os.getenv(\"MLFLOW_TRACKING_URI\", \"http://127.0.0.1:5000\")\nEXPERIMENT = os.getenv(\"MLFLOW_EXPERIMENT\", \"docs_minimal_rag\")\nLANGFUSE_HOST = os.getenv(\"LANGFUSE_BASE_URL\", \"http://localhost:3000\")\nPUBLIC_KEY = os.getenv(\"LANGFUSE_PUBLIC_KEY\", \"\")\nSECRET_KEY = os.getenv(\"LANGFUSE_SECRET_KEY\", \"\")\nMODEL = os.getenv(\"LLM_MODEL\", \"ollama/llama3.2\")\nOLLAMA_URL = os.getenv(\"OLLAMA_API_BASE\", \"http://localhost:11434\")\nEMBED_MODEL = os.getenv(\"LOCAL_EMBED_MODEL\", \"sentence-transformers/all-MiniLM-L6-v2\")\n\nQUESTION = \"What does RAG combine?\"\nREFERENCE = \"RAG combines information retrieval with language-model generation.\"\nRAG = {\"chunk_size\": 220, \"chunk_overlap\": 30, \"search_type\": \"similarity\", \"top_k\": 2}\nPROMPT = {\n    \"name\": \"grounded_rag_qa\",\n    \"version\": \"1\",\n    \"system\": \"Answer only from the supplied context in one concise sentence.\",\n    \"user\": \"Context:\\n{context}\\n\\nQuestion: {question}\",\n}\nDOCUMENTS = [\n    {\"source\": \"rag_notes.txt\", \"text\": \"Retrieval-augmented generation, or RAG, combines information retrieval with language-model generation.\"},\n    {\"source\": \"tracing_notes.txt\", \"text\": \"Tracing records retrieval, prompts, model calls, latency, tokens, and outputs.\"},\n    {\"source\": \"evaluation_notes.txt\", \"text\": \"RAG evaluation can compare retrieval quality, answer similarity, latency, and token usage.\"},\n]\n\ndef token_f1(prediction, reference):\n    pred = Counter(re.findall(r\"\\w+\", prediction.lower()))\n    ref = Counter(re.findall(r\"\\w+\", reference.lower()))\n    overlap = sum((pred &amp; ref).values())\n    if not overlap:\n        return 0.0\n    precision, recall = overlap / sum(pred.values()), overlap / sum(ref.values())\n    return 2 * precision * recall / (precision + recall)\n\ndef semantic_similarity(embeddings, prediction, reference):\n    pred_vector, ref_vector = embeddings.embed_documents([prediction, reference])\n    return float(sum(a * b for a, b in zip(pred_vector, ref_vector)))\n\ndef main():\n    if not all([PUBLIC_KEY, SECRET_KEY]):\n        raise RuntimeError(\"Set the Langfuse keys and project ID in .env.\")\n\n    mlflow.set_tracking_uri(MLFLOW_URI)\n    experiment_id = str(mlflow.set_experiment(EXPERIMENT).experiment_id)\n    langfuse = Langfuse(public_key=PUBLIC_KEY, secret_key=SECRET_KEY, base_url=LANGFUSE_HOST)\n    embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL, encode_kwargs={\"normalize_embeddings\": True})\n\n    experiment_tags = {\n        \"experiment_type\": \"llm\",\n        \"langfuse.user_id\": experiment_id,\n    }\n    client = MlflowClient()\n    for key, value in experiment_tags.items():\n        client.set_experiment_tag(experiment_id, key, value)\n\n    with mlflow.start_run(run_name=\"minimal_real_rag\") as run:\n        run_id = run.info.run_id\n        mlflow.set_tags({\n            **experiment_tags,\n            \"langfuse.session_id\": run_id,\n        })\n        mlflow.log_params({\n            \"model\": MODEL,\n            \"embedding_model\": EMBED_MODEL,\n            \"prompt_name\": PROMPT[\"name\"],\n            \"prompt_version\": PROMPT[\"version\"],\n            **RAG,\n        })\n\n        with langfuse.start_as_current_observation(\n            name=\"minimal_rag_example\",\n            as_type=\"chain\",\n            input={\"question\": QUESTION},\n        ) as trace:\n            with propagate_attributes(\n                trace_name=\"minimal_rag_example\",\n                user_id=experiment_id,\n                session_id=run_id,\n                metadata={\n                    \"mlflow_experiment_id\": experiment_id,\n                    \"mlflow_run_id\": run_id,\n                },\n                tags=[EXPERIMENT, \"minimal_real_rag\"],\n            ):\n                with langfuse.start_as_current_observation(\n                    name=\"build_vectorstore\",\n                    as_type=\"embedding\",\n                    input={**RAG, \"embedding_model\": EMBED_MODEL},\n                ) as span:\n                    splitter = RecursiveCharacterTextSplitter(chunk_size=RAG[\"chunk_size\"], chunk_overlap=RAG[\"chunk_overlap\"])\n                    chunks = splitter.create_documents(\n                        [doc[\"text\"] for doc in DOCUMENTS],\n                        metadatas=[{\"source\": doc[\"source\"]} for doc in DOCUMENTS],\n                    )\n                    store = FAISS.from_documents(chunks, embeddings)\n                    span.update(output={\"indexed_chunks\": len(chunks)})\n\n                with langfuse.start_as_current_observation(\n                    name=\"retrieve_documents\",\n                    as_type=\"retriever\",\n                    input={\"query\": QUESTION, **RAG},\n                ) as span:\n                    retriever = store.as_retriever(search_type=RAG[\"search_type\"], search_kwargs={\"k\": RAG[\"top_k\"]})\n                    docs = retriever.invoke(QUESTION)\n                    retrieved = [\n                        {\"source\": doc.metadata[\"source\"], \"content\": doc.page_content}\n                        for doc in docs\n                    ]\n                    span.update(output={\"documents\": retrieved})\n\n                context = \"\\n\\n\".join(\n                    f\"[{i}] {doc['source']}\\n{doc['content']}\"\n                    for i, doc in enumerate(retrieved, 1)\n                )\n                user_prompt = PROMPT[\"user\"].format(context=context, question=QUESTION)\n                messages = [\n                    {\"role\": \"system\", \"content\": PROMPT[\"system\"]},\n                    {\"role\": \"user\", \"content\": user_prompt},\n                ]\n\n                started = time.perf_counter()\n                with langfuse.start_as_current_observation(\n                    name=\"llm_call\",\n                    as_type=\"generation\",\n                    input={\"messages\": messages, \"prompt\": PROMPT},\n                    model=MODEL,\n                    model_parameters={\"temperature\": 0.0},\n                ) as span:\n                    response = completion(\n                        model=MODEL,\n                        api_base=OLLAMA_URL,\n                        temperature=0.0,\n                        messages=messages,\n                    )\n                    latency_ms = (time.perf_counter() - started) * 1000\n                    answer = response[\"choices\"][0][\"message\"][\"content\"]\n                    usage = response.get(\"usage\", {}) or {}\n                    span.update(output={\"answer\": answer}, usage_details=usage)\n\n            metrics = {\n                \"token_f1\": token_f1(answer, REFERENCE),\n                \"semantic_similarity\": semantic_similarity(embeddings, answer, REFERENCE),\n                \"retrieval_hit\": float(any(doc[\"source\"] == \"rag_notes.txt\" for doc in retrieved)),\n                \"latency_ms\": latency_ms,\n                \"total_tokens\": float(usage.get(\"total_tokens\") or 0),\n            }\n            for name, value in metrics.items():\n                trace.score_trace(name=name, value=value, data_type=\"NUMERIC\")\n            trace.update(output={\"answer\": answer, \"metrics\": metrics})\n            trace_id = trace.trace_id\n            trace_url = langfuse.get_trace_url(trace_id=trace_id)\n\n        mlflow.log_metrics(metrics)\n        mlflow.set_tags({\n            \"langfuse.trace_id\": trace_id,\n            \"langfuse.trace_url\": trace_url,\n        })\n        mlflow.log_dict(PROMPT, \"prompt/prompt_definition.json\")\n        mlflow.log_text(user_prompt, \"prompt/rendered_prompt.txt\")\n        mlflow.log_dict(retrieved, \"retrieval/retrieved_documents.json\")\n        mlflow.log_dict({\n            \"question\": QUESTION,\n            \"reference\": REFERENCE,\n            \"answer\": answer,\n            \"metrics\": metrics,\n            \"mlflow_run_id\": run_id,\n            \"langfuse_trace_id\": trace_id,\n            \"langfuse_trace_url\": trace_url,\n        }, \"results/result.json\")\n\n        print(f\"Answer: {answer}\")\n        print(f\"Metrics: {metrics}\")\n        print(f\"MLflow run: {run_id}\")\n        print(f\"Langfuse trace: {trace_url}\")\n\n    langfuse.flush()\n\nif __name__ == \"__main__\":\n    main()</code></pre>"
+        },
+        {
+          "title": "Run it",
+          "content": "With MLflow, Langfuse, and Ollama all reachable, run:<br/><br/><pre class=\"mt-2 rounded-lg bg-slate-900 p-3 text-xs text-slate-100 overflow-x-auto\"><code class=\"language-bash\">python rag_experiment.py</code></pre><br/>The script prints the generated answer, the computed metrics, the MLflow run ID, and the Langfuse trace URL. After running the script, open ExperimentLens, select the docs_minimal_rag experiment, and inspect the logged run."
+        }
+      ]
+    }
+  ],
+  "subBlockPlaceholder": "Content to be added.",
+  "emptySectionPlaceholder": "Content to be added."
+}
