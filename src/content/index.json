@@ -13,7 +13,8 @@
     "titlePre": "Trace, evaluate and ",
     "titleHighlight": "observe ",
     "titlePost": "your agents, LLM apps and ML experiments.",
-    "subtitle": "ExperimentLens brings visual analytics to agentic systems. It captures full traces, LLM-as-judge verdicts and deterministic checks for every run — so you can see exactly how your agents retrieve, reason and answer.<br/>Each experiment run links to one or more traces, side by side with the parameters and metrics you already track. It remains the same dashboard for classic ML experiment tracking, comparison and explainability.",
+    "subtitleLead": "ExperimentLens makes agent behaviour transparent.",
+    "subtitle": "It captures full traces, LLM-as-judge verdicts and deterministic checks for every run — so you can see exactly how your agents retrieve, reason and answer.<br/><br/>ExperimentLens turns agent experiments into actionable insights. Teams can compare different agent configurations, understand what drives performance, and quickly identify where an agent succeeds or fails — making it easier to build, evaluate and continuously improve reliable agentic AI.",
     "primaryCta": "Open live demo",
     "secondaryCta": "Explore agent features",
     "imageAlt": "ExperimentLens sessions page with parameter table and parallel coordinates plot",
@@ -173,8 +174,8 @@
   },
   "repos": {
     "eyebrow": "Open source",
-    "title": "Three repositories, one platform.",
-    "subtitle": "ExperimentLens is developed as an open-source project.",
+    "title": "Open source. Built for collaboration.",
+    "subtitle": "Explore the ExperimentLens repositories, reuse and extend the platform, contribute to the codebase, or get in touch to join the project.",
     "viewCta": "View on GitHub",
     "items": [
       { "name": "vis-frontend", "desc": "The ExperimentLens React frontend — dashboards, charts and explainability views.", "repoKey": "frontend" },
@@ -185,6 +186,9 @@
   "footer": {
     "tagline": "Visual analytics, observability & explainability for agents, LLM applications and ML experiments.",
     "copyright": "ExperimentLens",
+    "licensePre": "Released under the ",
+    "licenseLabel": "Apache License 2.0",
+    "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
     "columns": [
       {
         "title": "Product",

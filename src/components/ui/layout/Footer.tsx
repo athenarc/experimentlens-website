@@ -89,8 +89,21 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-6 pt-6 text-xs text-slate-500">
-        © {new Date().getFullYear()} {t.footer.copyright}
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 px-6 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <span>
+          © {new Date().getFullYear()} {t.footer.copyright}
+        </span>
+        <span>
+          {t.footer.licensePre}
+          <a
+            href={t.footer.licenseUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 underline-offset-2 hover:text-white hover:underline"
+          >
+            {t.footer.licenseLabel}
+          </a>
+        </span>
       </div>
     </footer>
   );

@@ -22,8 +22,11 @@ export function AgenticHero() {
             </span>
             {t.agenticHero.titlePost}
           </h1>
+          <p className="mt-5 text-center text-xl font-bold text-slate-800">
+            {t.agenticHero.subtitleLead}
+          </p>
           <p
-            className="mt-5 text-lg leading-relaxed text-slate-600"
+            className="mt-3 text-lg leading-relaxed text-slate-600"
             dangerouslySetInnerHTML={{ __html: t.agenticHero.subtitle }}
           />
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
