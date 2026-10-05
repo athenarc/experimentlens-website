@@ -121,6 +121,12 @@
       "group": "Getting started"
     },
     {
+      "id": "ml-hands-on",
+      "title": "Hands-on tasks",
+      "icon": "ListChecks",
+      "group": "Concepts"
+    },
+    {
       "id": "exp-execution-actions",
       "title": "Execution engine-only actions",
       "icon": "Zap",
@@ -130,12 +136,6 @@
       "id": "explainability",
       "title": "How explainability works",
       "icon": "Brain",
-      "group": "Concepts"
-    },
-    {
-      "id": "ml-hands-on",
-      "title": "Hands-on tasks",
-      "icon": "ListChecks",
       "group": "Concepts"
     },
     {
@@ -214,6 +214,55 @@
       ]
     },
     {
+      "id": "ml-hands-on",
+      "tabs": ["ml"],
+      "eyebrow": "Concepts",
+      "title": "Hands-on tasks with ML experiments",
+      "description": "A guided walkthrough of an ML experiment in ExperimentLens. The example is a model trained several times with different combinations of params, then scored on a set of metrics. Each task below has a goal, the steps to follow, and what to look for.",
+      "subBlocks": [
+        {
+          "title": "Before you start",
+          "content": "ExperimentLens opens every experiment in <strong>Monitoring</strong>, where each experiment is a set of <strong>runs</strong> (also called workflows). Each run has <strong>params</strong> (the settings you chose) and <strong>metrics</strong> (the results you measured). For ML experiments the following tabs are available:<br/><br/><div class=\"overflow-x-auto\"><table class=\"w-full border-collapse text-left text-sm\"><thead><tr><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">Tab</th><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">What it shows</th></tr></thead><tbody><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Overview</td><td class=\"border border-slate-200 px-4 py-2\">Runs table + parallel coordinates</td></tr><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Compare</td><td class=\"border border-slate-200 px-4 py-2\">Metrics, Models, Data</td></tr><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Explainability</td><td class=\"border border-slate-200 px-4 py-2\">Param importance, PDP, ALE</td></tr></tbody></table></div><br/>Clicking any run in a table opens its <strong>workflow page</strong>, which has the run's own details, model insights and artifacts."
+        },
+        {
+          "title": "Task 1: Get the big picture",
+          "content": "<strong>Goal:</strong> understand what was tried and how the results spread, in under a minute.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Open the experiment. You land on <strong>Overview</strong>.</li><li>In the runs table, open <strong>Columns</strong> and show the params you varied and the metrics you care about. Hide everything else.</li><li>Scroll to the <strong>parallel coordinates plot</strong>. Each line is a run, going from params on the left to metrics on the right.</li><li>Drag the axes to put the most interesting param next to your main metric.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> how many runs there are, which params were varied and over what range, and whether the lines spread out or converge on the metric axes.<br/><strong>Why it matters:</strong> you understand the whole search space before you look at any single run.</div>",
+          "image": "screenOverview",
+          "imageAlt": "Overview tab showing the runs table and parallel coordinates plot"
+        },
+        {
+          "title": "Task 2: Find the best run and justify it",
+          "content": "<strong>Goal:</strong> pick a winner and explain why.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>In the runs table, sort by your main metric (descending), then by a second metric to break ties.</li><li>Use <strong>Filter list</strong> to hide failed or irrelevant runs.</li><li>Open <strong>Group by</strong> and group by one param to see how groups of runs compare.</li><li>Star-rate your top candidates so you can find them again.</li><li>Click <strong>Export to CSV</strong> to save the results for a report.</li><li><em>Optional:</em> open <strong>Experiment Highlights</strong> to see runs clustered automatically, with decision rules that describe each cluster.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether one run clearly wins, or several runs perform about the same. If they are about the same, prefer the simplest or cheapest configuration.<br/><strong>Why it matters:</strong> the chosen run is backed by evidence you can reproduce and share.</div>",
+          "image": "workflowTable",
+          "imageAlt": "Runs table with status and actions columns"
+        },
+        {
+          "title": "Task 3: Compare models head to head",
+          "content": "<strong>Goal:</strong> see <em>how</em> two or three models differ, not just by how much.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Go to <strong>Compare</strong> and select 2&ndash;3 runs in the left panel. Try the best, the worst, and one in between.</li><li>In <strong>METRICS</strong>, choose metrics under <strong>Select Metrics</strong> and compare the bars.</li><li>Switch to <strong>MODELS</strong>:<ul class=\"mt-1 list-disc space-y-1 pl-5\"><li>Read the <strong>confusion matrices</strong> and try <strong>Mosaic</strong> vs <strong>Stacked</strong> view.</li><li>Read the <strong>ROC curves</strong>.</li><li>Use <strong>Sort by F1</strong> and <strong>Sort by AUC</strong> to rank the models.</li></ul></li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether the models make the same <em>kind</em> of errors (false positives vs false negatives), and whether a small metric gap hides a bigger difference in behaviour.<br/><strong>Why it matters:</strong> two models with similar scores can fail in very different ways.</div>",
+          "image": "screenComparative",
+          "imageAlt": "Compare tab showing selected runs and metric bar charts"
+        },
+        {
+          "title": "Task 4: Check the data behind the models",
+          "content": "<strong>Goal:</strong> make sure a comparison is fair.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>In <strong>Compare</strong>, switch to <strong>DATA</strong>.</li><li>Under <strong>Select Dataset</strong>, pick a dataset (e.g. training or test) and choose a few columns.</li><li>Switch between <strong>Distribution Plots</strong> and <strong>Box Plots</strong>.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether all runs used the same data, and whether any features are skewed, have outliers, or differ between datasets.<br/><strong>Why it matters:</strong> a better metric on different data is not a better model.</div>",
+          "image": "compareData",
+          "imageAlt": "Dataset artifact view showing the training data table"
+        },
+        {
+          "title": "Task 5: Find out which params actually matter",
+          "content": "<strong>Goal:</strong> decide where tuning effort is worth spending.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Open the <strong>Explainability</strong> tab.</li><li>Read the <strong>param importance</strong> chart, which ranks params by their influence on the metric.</li><li>For the top params, read the <strong>PDP</strong> (the average effect of a param) and the <strong>ALE</strong> plot (the same effect, more robust when params are correlated).</li><li>Read the <strong>2D PDP</strong> contour plot to see how two params interact.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> steep curves are params worth tuning. Flat curves are params you can fix and forget. The contour plot shows whether the best value of one param depends on another.<br/><strong>Why it matters:</strong> your next experiment can be smaller, cheaper and more targeted.</div>",
+          "image": "screenGlobalExplainability",
+          "imageAlt": "Explainability tab showing param importance, PDP and ALE plots"
+        },
+        {
+          "title": "Task 6: Open the black box of a single model",
+          "content": "<strong>Goal:</strong> explain individual predictions.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>From the runs table, click your chosen run. This opens its workflow page.</li><li>Expand <strong>Model Insights</strong>:<ul class=\"mt-1 list-disc space-y-1 pl-5\"><li><strong>Instance View:</strong> switch between <strong>Table</strong> and <strong>Scatter</strong> to find misclassified instances.</li><li><strong>Feature Explainability:</strong> see which input features drive the predictions.</li><li><strong>Hyperparameter Explainability:</strong> see how this run's params compare with its neighbours.</li><li><strong>Global Counterfactuals:</strong> see the smallest changes that would flip a prediction.</li></ul></li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> patterns in the errors, and features that are unexpectedly influential (a possible sign of bias or data leakage).<br/><strong>Why it matters:</strong> these are the explanations a domain expert or auditor will ask for.</div>",
+          "image": "modelAnalysis",
+          "imageAlt": "Workflow page showing the Model Insights menu and model overview"
+        }
+      ]
+    },
+    {
       "id": "exp-execution-actions",
       "tabs": ["ml"],
       "eyebrow": "Concepts",
@@ -276,55 +325,6 @@
           "content": "Global counterfactuals suggest high-level actions that could improve the experiment outcomes. Users can configure the number of counterfactual actions, the local counterfactual method, and the action choice strategy. ExperimentLens then summarizes the total cost and effectiveness of the suggested actions.<br/><br/>The table shows recommended feature or hyperparameter changes, while the action selection charts visualize how the selected actions affect the experiment space before and after applying the counterfactual strategy.",
           "image": "globalCounterfactuals",
           "imageAlt": "Global counterfactuals view showing action recommendations, cost, effectiveness, and action selection plots"
-        }
-      ]
-    },
-    {
-      "id": "ml-hands-on",
-      "tabs": ["ml"],
-      "eyebrow": "Concepts",
-      "title": "Hands-on tasks with ML experiments",
-      "description": "A guided walkthrough of an ML experiment in ExperimentLens. The example is a model trained several times with different combinations of params, then scored on a set of metrics. Each task below has a goal, the steps to follow, and what to look for.",
-      "subBlocks": [
-        {
-          "title": "Before you start",
-          "content": "ExperimentLens opens every experiment in <strong>Monitoring</strong>, where each experiment is a set of <strong>runs</strong> (also called workflows). Each run has <strong>params</strong> (the settings you chose) and <strong>metrics</strong> (the results you measured). For ML experiments the following tabs are available:<br/><br/><div class=\"overflow-x-auto\"><table class=\"w-full border-collapse text-left text-sm\"><thead><tr><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">Tab</th><th class=\"border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-900\">What it shows</th></tr></thead><tbody><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Overview</td><td class=\"border border-slate-200 px-4 py-2\">Runs table + parallel coordinates</td></tr><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Compare</td><td class=\"border border-slate-200 px-4 py-2\">Metrics, Models, Data</td></tr><tr><td class=\"border border-slate-200 px-4 py-2 font-medium\">Explainability</td><td class=\"border border-slate-200 px-4 py-2\">Param importance, PDP, ALE</td></tr></tbody></table></div><br/>Clicking any run in a table opens its <strong>workflow page</strong>, which has the run's own details, model insights and artifacts."
-        },
-        {
-          "title": "Task 1: Get the big picture",
-          "content": "<strong>Goal:</strong> understand what was tried and how the results spread, in under a minute.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Open the experiment. You land on <strong>Overview</strong>.</li><li>In the runs table, open <strong>Columns</strong> and show the params you varied and the metrics you care about. Hide everything else.</li><li>Scroll to the <strong>parallel coordinates plot</strong>. Each line is a run, going from params on the left to metrics on the right.</li><li>Drag the axes to put the most interesting param next to your main metric.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> how many runs there are, which params were varied and over what range, and whether the lines spread out or converge on the metric axes.<br/><strong>Why it matters:</strong> you understand the whole search space before you look at any single run.</div>",
-          "image": "screenOverview",
-          "imageAlt": "Overview tab showing the runs table and parallel coordinates plot"
-        },
-        {
-          "title": "Task 2: Find the best run and justify it",
-          "content": "<strong>Goal:</strong> pick a winner and explain why.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>In the runs table, sort by your main metric (descending), then by a second metric to break ties.</li><li>Use <strong>Filter list</strong> to hide failed or irrelevant runs.</li><li>Open <strong>Group by</strong> and group by one param to see how groups of runs compare.</li><li>Star-rate your top candidates so you can find them again.</li><li>Click <strong>Export to CSV</strong> to save the results for a report.</li><li><em>Optional:</em> open <strong>Experiment Highlights</strong> to see runs clustered automatically, with decision rules that describe each cluster.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether one run clearly wins, or several runs perform about the same. If they are about the same, prefer the simplest or cheapest configuration.<br/><strong>Why it matters:</strong> the chosen run is backed by evidence you can reproduce and share.</div>",
-          "image": "workflowTable",
-          "imageAlt": "Runs table with status and actions columns"
-        },
-        {
-          "title": "Task 3: Compare models head to head",
-          "content": "<strong>Goal:</strong> see <em>how</em> two or three models differ, not just by how much.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Go to <strong>Compare</strong> and select 2&ndash;3 runs in the left panel. Try the best, the worst, and one in between.</li><li>In <strong>METRICS</strong>, choose metrics under <strong>Select Metrics</strong> and compare the bars.</li><li>Switch to <strong>MODELS</strong>:<ul class=\"mt-1 list-disc space-y-1 pl-5\"><li>Read the <strong>confusion matrices</strong> and try <strong>Mosaic</strong> vs <strong>Stacked</strong> view.</li><li>Read the <strong>ROC curves</strong>.</li><li>Use <strong>Sort by F1</strong> and <strong>Sort by AUC</strong> to rank the models.</li></ul></li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether the models make the same <em>kind</em> of errors (false positives vs false negatives), and whether a small metric gap hides a bigger difference in behaviour.<br/><strong>Why it matters:</strong> two models with similar scores can fail in very different ways.</div>",
-          "image": "screenComparative",
-          "imageAlt": "Compare tab showing selected runs and metric bar charts"
-        },
-        {
-          "title": "Task 4: Check the data behind the models",
-          "content": "<strong>Goal:</strong> make sure a comparison is fair.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>In <strong>Compare</strong>, switch to <strong>DATA</strong>.</li><li>Under <strong>Select Dataset</strong>, pick a dataset (e.g. training or test) and choose a few columns.</li><li>Switch between <strong>Distribution Plots</strong> and <strong>Box Plots</strong>.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> whether all runs used the same data, and whether any features are skewed, have outliers, or differ between datasets.<br/><strong>Why it matters:</strong> a better metric on different data is not a better model.</div>",
-          "image": "compareData",
-          "imageAlt": "Dataset artifact view showing the training data table"
-        },
-        {
-          "title": "Task 5: Find out which params actually matter",
-          "content": "<strong>Goal:</strong> decide where tuning effort is worth spending.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>Open the <strong>Explainability</strong> tab.</li><li>Read the <strong>param importance</strong> chart, which ranks params by their influence on the metric.</li><li>For the top params, read the <strong>PDP</strong> (the average effect of a param) and the <strong>ALE</strong> plot (the same effect, more robust when params are correlated).</li><li>Read the <strong>2D PDP</strong> contour plot to see how two params interact.</li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> steep curves are params worth tuning. Flat curves are params you can fix and forget. The contour plot shows whether the best value of one param depends on another.<br/><strong>Why it matters:</strong> your next experiment can be smaller, cheaper and more targeted.</div>",
-          "image": "screenGlobalExplainability",
-          "imageAlt": "Explainability tab showing param importance, PDP and ALE plots"
-        },
-        {
-          "title": "Task 6: Open the black box of a single model",
-          "content": "<strong>Goal:</strong> explain individual predictions.<br/><br/><ol class=\"list-decimal space-y-1 pl-5\"><li>From the runs table, click your chosen run. This opens its workflow page.</li><li>Expand <strong>Model Insights</strong>:<ul class=\"mt-1 list-disc space-y-1 pl-5\"><li><strong>Instance View:</strong> switch between <strong>Table</strong> and <strong>Scatter</strong> to find misclassified instances.</li><li><strong>Feature Explainability:</strong> see which input features drive the predictions.</li><li><strong>Hyperparameter Explainability:</strong> see how this run's params compare with its neighbours.</li><li><strong>Global Counterfactuals:</strong> see the smallest changes that would flip a prediction.</li></ul></li></ol><br/><div class=\"rounded-md border-l-4 border-sky-600 bg-slate-50 px-4 py-3\"><strong>What to look for:</strong> patterns in the errors, and features that are unexpectedly influential (a possible sign of bias or data leakage).<br/><strong>Why it matters:</strong> these are the explanations a domain expert or auditor will ask for.</div>",
-          "image": "modelAnalysis",
-          "imageAlt": "Workflow page showing the Model Insights menu and model overview"
         }
       ]
     },
