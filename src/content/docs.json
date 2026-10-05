@@ -34,13 +34,13 @@
         "title": "Concepts",
         "children": [
           {
+            "id": "ml-hands-on"
+          },
+          {
             "id": "exp-execution-actions"
           },
           {
             "id": "explainability"
-          },
-          {
-            "id": "ml-hands-on"
           }
         ]
       },
