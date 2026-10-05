@@ -3,10 +3,10 @@ import { Check } from "lucide-react";
 
 import screenOverview from "@/assets/screen-overview.png";
 import screenComparative from "@/assets/screen-comparative.png";
-import screenExplainability from "@/assets/screen-explainability.png";
 import screenExperiments from "@/assets/screen-experiments.png";
-import screenWorkflow from "@/assets/screen-workflow.png";
+import screenGlobalExplainability from "@/assets/global-explainability.png";
 import instanceView from "@/assets/instance-view.png";
+import modelAnalysis from "@/assets/model-analysis.png";
 import agentsSessions from "@/assets/agents-sessions.png";
 import agentsTraceGraph from "@/assets/agents-trace-graph.png";
 import agentsTraceEval from "@/assets/agents-trace-eval.png";
@@ -22,10 +22,10 @@ import { BrowserFrame } from "../../../components/ui/content/BrowserFrame";
 const IMAGES: Record<string, string> = {
   screenOverview,
   screenComparative,
-  screenExplainability,
+  screenGlobalExplainability,
   screenExperiments,
-  screenWorkflow,
   instanceView,
+  modelAnalysis,
   agentsSessions,
   agentsTraceGraph,
   agentsTraceEval,

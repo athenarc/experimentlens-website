@@ -9,7 +9,15 @@ import featureExplainability from "@/assets/feature-explainability.png";
 import paramExplainability from "@/assets/param-explainability.png";
 import globalExplainability from "@/assets/global-explainability.png";
 import globalCounterfactuals from "@/assets/global-counterfactuals.png";
-
+import screenComparative from "@/assets/screen-comparative.png";
+import screenArtifact from "@/assets/screen-artifact.png";
+import screenGlobalExplainability from "@/assets/global-explainability.png";
+import agentsOverviewUsage from "@/assets/agents-overview-usage.png";
+import agentsSessions from "@/assets/agents-sessions.png";
+import agentsTraceReplay from "@/assets/agents-trace-replay.png";
+import agentsCompareVerdicts from "@/assets/agents-compare-verdicts.png";
+import agentsScan from "@/assets/agents-scan.png";
+import compareData from "@/assets/compare-data.png"; // import your new image
 
 // import your new image
 
@@ -53,6 +61,15 @@ const IMAGES: Record<string, string> = {
   paramExplainability,
   globalExplainability,
   globalCounterfactuals,
+  screenComparative,
+  screenArtifact,
+  screenGlobalExplainability,
+  agentsOverviewUsage,
+  agentsSessions,
+  agentsTraceReplay,
+  agentsCompareVerdicts,
+  agentsScan,
+  compareData,
 };
 
 export function DocSection({

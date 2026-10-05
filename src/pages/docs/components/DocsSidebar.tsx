@@ -5,6 +5,7 @@ import {
   ChevronRight,
   FlaskConical,
   Hammer,
+  ListChecks,
   Rocket,
   Sparkles,
   Terminal,
@@ -27,6 +28,7 @@ const ICONS: Record<string, LucideIcon> = {
   Brain,
   Zap,
   Waypoints,
+  ListChecks,
 };
 
 type DocSectionLink = {

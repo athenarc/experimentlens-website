@@ -5,9 +5,9 @@ import Autoplay from "embla-carousel-autoplay";
 
 import screenOverview from "@/assets/screen-overview.png";
 import screenComparative from "@/assets/screen-comparative.png";
-import screenExplainability from "@/assets/screen-explainability.png";
+import screenGlobalExplainability from "@/assets/global-explainability.png";
 import screenExperiments from "@/assets/screen-experiments.png";
-import screenWorkflow from "@/assets/screen-workflow.png";
+import modelAnalysis from "@/assets/model-analysis.png";
 import screenArtifact from "@/assets/screen-artifact.png";
 
 import {
@@ -23,9 +23,9 @@ import { BrowserFrame } from "../../../components/ui/content/BrowserFrame";
 const IMAGES: Record<string, string> = {
   screenOverview,
   screenComparative,
-  screenExplainability,
+  screenGlobalExplainability,
   screenExperiments,
-  screenWorkflow,
+  modelAnalysis,
   screenArtifact,
 };
 

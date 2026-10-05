@@ -101,8 +101,8 @@
       { "title": "Visualize the metrics you log.", "image": "screenOverview" },
       { "title": "Analyze runs side-by-side.", "image": "screenComparative" },
       { "title": "Inspect artifacts and data.", "image": "screenArtifact" },
-      { "title": "Explain your model decisions.", "image": "screenExplainability" },
-      { "title": "Inspect your workflows.", "image": "screenWorkflow" }
+      { "title": "Explain your model decisions.", "image": "screenGlobalExplainability" },
+      { "title": "Inspect your workflows.", "image": "modelAnalysis" }
     ],
     "exploreCta": "Explore all features"
   },
@@ -168,7 +168,7 @@
     "cards": [
       { "title": "Fairness-aware classification", "sub": "108 runs · parallel coordinates", "image": "screenOverview" },
       { "title": "Side-by-side comparison", "sub": "Mosaic vs stacked metrics", "image": "screenComparative" },
-      { "title": "Explainability surface", "sub": "Feature importance · PDP · ALE", "image": "screenExplainability" }
+      { "title": "Explainability surface", "sub": "Feature importance · PDP · ALE", "image": "screenGlobalExplainability" }
     ],
     "cta": "Open the live demo"
   },

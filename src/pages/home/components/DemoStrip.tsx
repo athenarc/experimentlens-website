@@ -2,7 +2,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 import screenOverview from "@/assets/screen-overview.png";
 import screenComparative from "@/assets/screen-comparative.png";
-import screenExplainability from "@/assets/screen-explainability.png";
+import screenGlobalExplainability from "@/assets/global-explainability.png";
 import common from "@/content/common.json";
 import t from "@/content/index.json";
 import { SectionHeader } from "./SectionHeader";
@@ -10,7 +10,7 @@ import { SectionHeader } from "./SectionHeader";
 const IMAGES: Record<string, string> = {
   screenOverview,
   screenComparative,
-  screenExplainability,
+  screenGlobalExplainability,
 };
 
 export function DemoStrip() {

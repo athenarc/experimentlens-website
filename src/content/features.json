@@ -170,7 +170,7 @@
           "Partial Dependence Plots (PDP)",
           "Accumulated Local Effects (ALE) & counterfactuals"
         ],
-        "image": "screenExplainability"
+        "image": "screenGlobalExplainability"
       },
       {
         "eyebrow": "Workflow details",
@@ -181,7 +181,7 @@
           "Run ratings & status",
           "Direct link from any comparative view"
         ],
-        "image": "screenWorkflow"
+        "image": "modelAnalysis"
       }
     ]
   },
