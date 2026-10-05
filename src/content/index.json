@@ -14,7 +14,7 @@
     "titleHighlight": "observe ",
     "titlePost": "your agents, LLM apps and ML experiments.",
     "subtitleLead": "ExperimentLens makes agent behaviour transparent.",
-    "subtitle": "It captures full traces, LLM-as-judge verdicts and deterministic checks for every run — so you can see exactly how your agents retrieve, reason and answer.<br/><br/>ExperimentLens turns agent experiments into actionable insights. Teams can compare different agent configurations, understand what drives performance, and quickly identify where an agent succeeds or fails — making it easier to build, evaluate and continuously improve reliable agentic AI.",
+    "subtitle": "It captures full traces, LLM-as-judge verdicts and deterministic checks for every run — so you can see exactly how your agents retrieve, reason and answer.<br/><br/>ExperimentLens turns agent experiments into actionable insights. Teams can compare different agent configurations, understand what drives performance, and quickly identify where an agent succeeds or fails — making it easier to build, evaluate and improve reliable agentic AI.",
     "primaryCta": "Open live demo",
     "secondaryCta": "Explore agent features",
     "imageAlt": "ExperimentLens sessions page with parameter table and parallel coordinates plot",
@@ -203,6 +203,7 @@
         "title": "Resources",
         "links": [
           { "label": "Docs", "href": "/docs", "internal": true },
+          { "label": "Paper (VLDB GuideAI '25)", "href": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/GuideAI/GuideAI25_4.pdf", "external": true },
           { "label": "vis-frontend", "hrefKey": "repoFrontend", "external": true },
           { "label": "vis-api", "hrefKey": "repoApi", "external": true },
           { "label": "Explainability module", "hrefKey": "repoExplain", "external": true }
