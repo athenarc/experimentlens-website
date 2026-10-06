@@ -17,8 +17,8 @@
     "subtitle": "It captures full traces, LLM-as-judge verdicts and deterministic checks for every run — so you can see exactly how your agents retrieve, reason and answer.<br/><br/>ExperimentLens turns agent experiments into actionable insights. Teams can compare different agent configurations, understand what drives performance, and quickly identify where an agent succeeds or fails — making it easier to build, evaluate and improve reliable agentic AI.",
     "primaryCta": "Open live demo",
     "secondaryCta": "Explore agent features",
-    "imageAlt": "ExperimentLens sessions page with parameter table and parallel coordinates plot",
-    "imageCaption": "ExperimentLens dashboard: analyzing configuration effects on experiment performance."
+    "imageAlt": "ExperimentLens product demo video",
+    "imageCaption": "ExperimentLens demo: pick the best configuration and prove it."
   },
   "agenticValueProps": {
     "eyebrow": "Agentic observability",

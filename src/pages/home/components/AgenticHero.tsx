@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 
+import demoVideo from "@/assets/ExperimentLens-demo.mp4";
 import agentsSessions from "@/assets/agents-sessions.png";
 import common from "@/content/common.json";
 import t from "@/content/index.json";
@@ -51,10 +52,15 @@ export function AgenticHero() {
         <div className="relative mx-auto mt-14 max-w-6xl">
           <div className="absolute -inset-x-10 -top-6 -bottom-6 -z-10 rounded-[2rem] bg-gradient-to-tr from-sky-200/40 via-indigo-200/30 to-fuchsia-200/30 blur-2xl" />
           <BrowserFrame>
-            <img
-              src={agentsSessions}
-              alt={t.agenticHero.imageAlt}
+            <video
+              src={demoVideo}
+              poster={agentsSessions}
+              aria-label={t.agenticHero.imageAlt}
               className="block w-full"
+              muted
+              playsInline
+              controls
+              preload="metadata"
             />
           </BrowserFrame>
           <p className="mt-3 text-center text-xs italic text-slate-500">
