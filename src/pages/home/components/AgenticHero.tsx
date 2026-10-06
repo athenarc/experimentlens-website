@@ -54,7 +54,6 @@ export function AgenticHero() {
           <BrowserFrame>
             <video
               src={demoVideo}
-              poster={agentsSessions}
               aria-label={t.agenticHero.imageAlt}
               className="block w-full"
               muted
