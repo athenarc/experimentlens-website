@@ -1,6 +1,7 @@
 {
   "brand": "ExperimentLens",
   "liveDemoUrl": "https://extreme-viz.pulsar.imsi.athenarc.gr/706300898836261706/monitoring",
+  "contactEmail": "explens@athenarc.gr",
   "liveDemoUrlAgents": "https://extreme-viz.pulsar.imsi.athenarc.gr/714198661828850769/monitoring",
   "repos": {
     "frontend": "https://github.com/ExperimentLens/vis-frontend",
@@ -12,6 +13,7 @@
     "features": "Features",
     "docs": "Docs",
     "liveDemo": "Live demo",
-    "github": "GitHub"
+    "github": "GitHub",
+    "contact": "Contact"
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Github, Play, Menu, X } from "lucide-react";
+import { Github, Mail, Play, Menu, X } from "lucide-react";
 
 import { Logo } from "@/components/Logo";
 import common from "@/content/common.json";
@@ -44,6 +44,12 @@ export function Nav() {
           >
             <Github className="h-4 w-4" /> {common.nav.github}
           </a>
+          <Link
+            to="/contact"
+            className="hidden items-center gap-1.5 rounded-md border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50 sm:inline-flex"
+          >
+            <Mail className="h-4 w-4" /> {common.nav.contact}
+          </Link>
           <button
             className="ml-2 md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -81,6 +87,13 @@ export function Nav() {
             >
               {common.nav.liveDemo}
             </a>
+            <Link
+              to="/contact"
+              className="rounded-md px-3 py-2 hover:bg-slate-50 hover:text-slate-900 sm:hidden"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {common.nav.contact}
+            </Link>
           </nav>
         </div>
       )}

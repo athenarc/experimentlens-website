@@ -212,7 +212,8 @@
       {
         "title": "Project",
         "links": [
-          { "label": "ATHENA Research Center", "href": "https://www.athenarc.gr/", "external": true }
+          { "label": "ATHENA Research Center", "href": "https://www.athenarc.gr/", "external": true },
+          { "label": "Contact", "href": "/contact", "internal": true }
         ]
       }
     ]

@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Contact — ExperimentLens",
+    "description": "Get in touch with the ExperimentLens team at ATHENA Research Center.",
+    "ogTitle": "Contact — ExperimentLens",
+    "ogDescription": "Get in touch with the ExperimentLens team at ATHENA Research Center."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "subtitle": "Have questions, feedback, or interest in collaborating on ExperimentLens? We would love to hear from you."
+  },
+  "email": {
+    "label": "Email",
+    "cta": "Email us"
+  }
+}
