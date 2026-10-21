@@ -106,6 +106,8 @@
       "subtitle": "Everything ExperimentLens ships for agents and LLM apps, at a glance.",
       "items": [
         { "icon": "Waypoints", "title": "Trace ingestion", "body": "Every run links to one or more traces — spans, generations, retrievers and events." },
+        { "icon": "Code", "title": "Python SDK", "body": "Write experiments in Python and the ExperimentLens SDK logs every run to MLflow and its traces to Langfuse, with repeats, built-in quality and safety metrics, LLM judges and regression checks included." },
+        { "icon": "Network", "title": "OpenTelemetry-native", "body": "Keep the instrumentation you already have. Run your OpenTelemetry-instrumented app inside an SDK run, and its traces land in ExperimentLens linked to that run, without a rewrite." },
         { "icon": "LayoutDashboard", "title": "Overview dashboard", "body": "The Overview tab opens on stat tiles and trend graphs — sessions, traces, latency, tokens, cost and judge pass rate — across Usage, Quality and Agents sub-views." },
         { "icon": "Users", "title": "Sessions tab", "body": "Sessions get their own tab: one row per session with every logged parameter and metric, plus the parallel-coordinates plot linked to the table." },
         { "icon": "List", "title": "Traces tab", "body": "A dedicated Traces tab lists every trace across sessions, so you can search and filter without drilling in through a session first." },

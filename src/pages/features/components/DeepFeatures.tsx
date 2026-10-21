@@ -24,6 +24,8 @@ import {
   Users,
   List,
   ScanSearch,
+  Code,
+  Network,
   type LucideIcon,
 } from "lucide-react";
 
@@ -56,6 +58,8 @@ const ICONS: Record<string, LucideIcon> = {
   Users,
   List,
   ScanSearch,
+  Code,
+  Network,
 };
 
 function ExecutionEngineBadge() {

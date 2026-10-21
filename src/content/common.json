@@ -6,7 +6,8 @@
   "repos": {
     "frontend": "https://github.com/ExperimentLens/vis-frontend",
     "api": "https://github.com/ExperimentLens/vis-api",
-    "explain": "https://github.com/ExperimentLens/explainability-module"
+    "explain": "https://github.com/ExperimentLens/explainability-module",
+    "sdk": "https://github.com/ExperimentLens/experimentlens-sdk"
   },
   "browserFrameUrl": "extreme-viz.pulsar.imsi.athenarc.gr / experimentlens",
   "nav": {

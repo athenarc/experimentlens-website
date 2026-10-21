@@ -8,6 +8,7 @@ import {
   Server,
   Check,
   Waypoints,
+  Network,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,6 +24,7 @@ const ICONS: Record<string, LucideIcon> = {
   Eye,
   Server,
   Waypoints,
+  Network,
 };
 
 function IntegrationCard({
@@ -77,7 +79,7 @@ export function Integrations() {
           subtitle={t.integrations.subtitle}
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {t.integrations.cards.map((c) => (
             <IntegrationCard
               key={c.name}

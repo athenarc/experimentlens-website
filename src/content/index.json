@@ -143,6 +143,17 @@
           "Task-level status & artifact tracking",
           "Relaunch and steer modified pipelines"
         ]
+      },
+      {
+        "icon": "Network",
+        "tag": "Instrumentation",
+        "name": "OpenTelemetry",
+        "body": "Keep the instrumentation you already have. Run your OpenTelemetry-instrumented app inside an ExperimentLens SDK run, and its traces land in Langfuse linked to the matching MLflow run, without a rewrite.",
+        "points": [
+          "Python SDK that logs runs to MLflow and traces to Langfuse",
+          "Any framework traced with standard OpenTelemetry instrumentation",
+          "Traces from other processes linked over OTLP"
+        ]
       }
     ],
     "footnote": "Adapter-based design — additional trackers and execution engines, such as Airflow, can be integrated without changing the UI."
@@ -206,7 +217,8 @@
           { "label": "Paper (VLDB GuideAI '25)", "href": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/GuideAI/GuideAI25_4.pdf", "external": true },
           { "label": "vis-frontend", "hrefKey": "repoFrontend", "external": true },
           { "label": "vis-api", "hrefKey": "repoApi", "external": true },
-          { "label": "Explainability module", "hrefKey": "repoExplain", "external": true }
+          { "label": "Explainability module", "hrefKey": "repoExplain", "external": true },
+          { "label": "Python SDK", "hrefKey": "repoSdk", "external": true }
         ]
       },
       {

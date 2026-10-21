@@ -8,6 +8,7 @@ const HREF_KEYS: Record<string, string> = {
   repoFrontend: common.repos.frontend,
   repoApi: common.repos.api,
   repoExplain: common.repos.explain,
+  repoSdk: common.repos.sdk,
 };
 
 function FooterCol({
